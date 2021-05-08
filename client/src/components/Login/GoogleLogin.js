@@ -1,5 +1,6 @@
 import React from "react";
 import { GoogleLogin } from "react-google-login";
+require('dotenv').config();
 
 function Login() {
   const onSuccess = (res) => {
@@ -11,7 +12,7 @@ function Login() {
   return (
     <div>
       <GoogleLogin
-        clientId="175590003618-r1inp9njjg3vbdkc1kvol0t5orm0bnaa.apps.googleusercontent.com"
+        clientId=''
         buttonText="Login"
         onSuccess={onSuccess}
         onFailure={onFailure}
@@ -20,5 +21,4 @@ function Login() {
     </div>
   );
 }
-
 export default Login;
