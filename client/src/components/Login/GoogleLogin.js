@@ -12,7 +12,7 @@ function Login() {
   return (
     <div>
       <GoogleLogin
-        clientId=''
+        clientId=""
         buttonText="Login"
         onSuccess={onSuccess}
         onFailure={onFailure}
