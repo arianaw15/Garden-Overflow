@@ -11,7 +11,7 @@ function Login() {
   return (
     <div>
       <GoogleLogin
-        clientId="175590003618-r1inp9njjg3vbdkc1kvol0t5orm0bnaa.apps.googleusercontent.com"
+        clientId=""
         buttonText="Login"
         onSuccess={onSuccess}
         onFailure={onFailure}
