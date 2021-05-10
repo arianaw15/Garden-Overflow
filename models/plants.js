@@ -6,7 +6,7 @@ const plantsSchema = new Schema({
   image_url: { type: String, required: true },
   type: { type: String, required: true },
   sun: { type: String, required: true },
-  hardiness: { type: String }
+  hardiness: { type: Array }
 });
 
 const Plants = mongoose.model("plants", plantsSchema);

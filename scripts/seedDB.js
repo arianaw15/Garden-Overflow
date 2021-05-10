@@ -960,11 +960,13 @@ const plants = [
       "type": "Houseplant",
       "sun": "Shade"
      }
-    ]
+    ];
+
+const newPlants = plants.map(plant => plant.hardiness = plant.hardiness.split(', '));
 
 db.Plants
   .remove({})
-  .then(() => db.Plants.collection.insertMany(plants))
+  .then(() => db.Plants.collection.insertMany(newPlants))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
