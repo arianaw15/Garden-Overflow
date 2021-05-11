@@ -1,10 +1,14 @@
 import React from 'react';
 import './index.css';
+import logo from './TransparentFullLogo.png'
 
 function UserLogin() {
   return (
     <form>
-      <h6 className="userLogin">User Login</h6>
+      <h6 className="userLogin">Welcome Back!</h6>
+      <div className="d-flex p-2 justify-content-center">
+        <img src={logo} alt="" width="200" className="img-fluid" />
+      </div>
       <div className="form-group">
         <label htmlFor="exampleInputEmail1">Email address</label>
         <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
