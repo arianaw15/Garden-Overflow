@@ -7,7 +7,7 @@ function UserLogin() {
     <form>
       <h6 className="userLogin">Welcome Back!</h6>
       <div className="d-flex p-2 justify-content-center">
-        <img src={logo} alt="" width="200" className="img-fluid" />
+        <img src={logo} alt="" width="200" className="img-fluid" style={{position: "relative", top: "50px"}} />
       </div>
       <div className="form-group">
         <label htmlFor="exampleInputEmail1">Email address</label>
