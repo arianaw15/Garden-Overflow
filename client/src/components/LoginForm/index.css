@@ -15,6 +15,40 @@
 }
 
 .userLogin {
+    font-family: 'Secular One', sans-serif;
     text-align: center;
     font-size: 2.5rem;
+    
+    /* Shine effect */
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 12px 48px;
+    color: #E8871E;
+    /* color: #ffffff; */
+    background: linear-gradient(to right, #50C9CE 0, #82FF9E 10%, #50C9CE 20%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    font-weight: 600;
+    /* font-size: 36px; */
+    text-decoration: none;
+    white-space: nowrap;
+    
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0;
+    }
+    60% {
+        background-position: 280px;
+    }
+    100% {
+        background-position: 380px;
+    }
 }
