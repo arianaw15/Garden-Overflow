@@ -20,8 +20,8 @@
     font-size: 2.5rem;
     
     /* Shine effect */
-    position: absolute;
-    top: 10%;
+    position: relative;
+    top: 40px;
     left: 50%;
     transform: translate(-50%,-50%);
     padding: 12px 48px;
@@ -46,9 +46,9 @@
         background-position: 0;
     }
     60% {
-        background-position: 280px;
+        background-position: 480px;
     }
     100% {
-        background-position: 380px;
+        background-position: 680px;
     }
 }
