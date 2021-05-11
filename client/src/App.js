@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from './components/Header/Header.js';
 import LandingPage from './components/LandingPage/LandingPage.js';
 import LoginForm from "./components/LoginForm/LoginForm";
+import NoMatch from "./components/NoMatch/NoMatch";
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         <Route exact path="/Home" component={LandingPage} />
         <Route exact path="/Login" component={LoginForm} />
         {/* <Route exact path="/CreateAccount" component={CreateAccount} /> */}
-        {/* <Route component={NoMatch} /> */}
+        <Route component={NoMatch} />
       </Switch>
     </Router>
   );
