@@ -5,7 +5,8 @@ const postSchema = new Schema({
   userName: { type: String, required: true },
   email: { type: String, required: true },
   title: { type: String, required: true },
-  body: { type: String, required: true }
+  body: { type: String, required: true },
+  zone : { type: String, required: true}
 });
 
 const Posts = mongoose.model("posts", postSchema);
