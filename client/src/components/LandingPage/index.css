@@ -3,3 +3,25 @@
     height: 92vh;
     /* margin-bottom: 10px; */
   }
+
+  body {
+    background: #fff;
+    /* padding: 20px; */
+  }
+  .vanta { 
+    min-height: 300px;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+  }
+
+  .imgLogo {
+    margin: 0;
+    position: relative;
+    left: 50%;
+    top: 320px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 250px;
+
+  }
