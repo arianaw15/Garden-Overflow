@@ -32,6 +32,7 @@
     background: linear-gradient(to right, #50C9CE 0, #82FF9E 10%, #50C9CE 20%);
     background-position: 0;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 3s infinite linear;
     animation-fill-mode: forwards;
