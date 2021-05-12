@@ -1,0 +1,7 @@
+.errorCode {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: relative;
+    top: 150px;
+    text-shadow:2px 2px rgba(14, 13, 13, 0.466);
+}
