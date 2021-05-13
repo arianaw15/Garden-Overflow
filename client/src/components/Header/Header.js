@@ -7,7 +7,7 @@ function Header() {
     return (
         <div>
             <header>
-                <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+                <nav className="navbar navbar-expand-sm navbar-dark">
                     <a className="navbar-brand" href="/">
                         <img src={logo} alt=""  height="30" className="d-inline-block align-text-top mr-2" />
                         <span className="garden">Garden</span> Overflow

@@ -16,7 +16,7 @@ function LandingPage() {
           scaleMobile: 1.00,
           color1: 0xe57500,
           color2: 0x1d6b06,
-          // backgroundColor: 0x28282c
+          backgroundColor: 0x81c36
         }))
       }
       return () => {
