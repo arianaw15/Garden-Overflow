@@ -7,7 +7,7 @@ function Pagination() {
         <div className="navbar-nav">
             <a className="nav-link active" href="/Home">Home <span className="sr-only">(current)</span></a>
             <a className="nav-link" href="/Login">Login</a>
-            <a className="nav-link" href="/">Create Account</a>
+            <a className="nav-link" href="/SignUp">Create Account</a>
             {/* <a className="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">Disabled</a> */}
         </div>
     </div>

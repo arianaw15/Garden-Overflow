@@ -5,6 +5,7 @@ import LandingPage from './components/LandingPage/LandingPage.js';
 import LoginForm from "./components/LoginForm/LoginForm";
 import NoMatch from "./components/NoMatch/NoMatch";
 import Footer from "./components/Footer/Footer";
+import SignUp from "./components/SignUp/SignUp";
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/Home" component={LandingPage} />
         <Route exact path="/Login" component={LoginForm} />
-        {/* <Route exact path="/CreateAccount" component={CreateAccount} /> */}
+        <Route exact path="/SignUp" component={SignUp} />
         <Route component={NoMatch} />
       </Switch>
       <Footer />
