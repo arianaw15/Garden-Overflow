@@ -12,7 +12,7 @@ const Postcard = ({ username, title, body, zone, tag, email }) => {
           <h4 className="card-title">{title}</h4>
           <h6 className="card-subtitle mb-2 text-muted">{tag}</h6>
           <p className="card-text">{body}</p>
-          <a href="#" className="card-link">
+          <a href="/Replyboard" className="card-link">
             View replies
           </a>
         </div>
