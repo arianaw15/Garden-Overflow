@@ -21,8 +21,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "cd client && react-scripts start",
+    "build": "cd client && react-scripts build",
     "test": "react-scripts test",
     "seed": "node scripts/seedDB.js",
     "eject": "react-scripts eject"
