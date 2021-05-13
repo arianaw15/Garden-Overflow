@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import * as THREE from "three";
 import BIRDS from 'vanta/src/vanta.birds.js';
-import logo from './transparentLogo.png'
+// import logo from './transparentLogo.png'
 import './index.css';
 
 function LandingPage() {
@@ -25,9 +25,25 @@ function LandingPage() {
     }, [vantaEffect])
 
     return (
-        <div ref={myRef} id="birdBackground">
-            <img src={logo} alt="Garden Overflow" className="imgLogo" />
+      <div ref={myRef} id="birdBackground">
+          {/* <img src={logo} alt="Garden Overflow" className="imgLogo" /> */}
+        <div className="container">
+          <div className="row">
+            <div className="col align-self-center">
+              <div className="card w-75 mx-auto"> 
+                <div className="card-body p-2">
+                  <h4 className="text-center pb-2">Gardening Tip of the Day:</h4>
+                  <div className="card w-100 mx-auto">
+                    <div className="card-body">
+                      Tip of the day placeholder!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     )
 }
 
