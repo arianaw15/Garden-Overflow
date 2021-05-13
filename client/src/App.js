@@ -6,6 +6,7 @@ import LoginForm from "./components/LoginForm/LoginForm";
 import NoMatch from "./components/NoMatch/NoMatch";
 import Footer from "./components/Footer/Footer";
 import SignUp from "./components/SignUp/SignUp";
+import Zoneforum from "./components/Forum/ZoneForum";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/Home" component={LandingPage} />
         <Route exact path="/Login" component={LoginForm} />
         <Route exact path="/SignUp" component={SignUp} />
+        <Route exact path="/ZoneForum" component={Zoneforum} />
         <Route component={NoMatch} />
       </Switch>
       <Footer />

@@ -6,7 +6,8 @@ const postSchema = new Schema({
   email: { type: String, required: true },
   title: { type: String, required: true },
   body: { type: String, required: true },
-  zone : { type: String, required: true}
+  zone : { type: String, required: true},
+  tag: {type: String, required: true}
 });
 
 const Posts = mongoose.model("posts", postSchema);
