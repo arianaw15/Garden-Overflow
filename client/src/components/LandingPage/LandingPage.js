@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import * as THREE from "three";
 import BIRDS from 'vanta/src/vanta.birds.js';
-import logo from './transparentLogo.png'
+// import logo from './transparentLogo.png'
 import './index.css';
 
 function LandingPage() {
