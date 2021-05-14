@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-gardenoverflow-dev-193620-authRole",
+      "UnauthRoleArn": "arn:aws:iam::020836124927:role/amplify-gardenoverflow-dev-193620-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::020836124927:role/amplify-gardenoverflow-dev-193620-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-gardenoverflow-dev-193620-deployment",
+      "UnauthRoleName": "amplify-gardenoverflow-dev-193620-unauthRole",
+      "StackName": "amplify-gardenoverflow-dev-193620",
+      "StackId": "arn:aws:cloudformation:us-west-2:020836124927:stack/amplify-gardenoverflow-dev-193620/ca0638b0-b454-11eb-90fa-06f35cd4e843",
+      "AmplifyAppId": "d1c78vz59q0uja"
+    },
+    "categories": {
+      "auth": {
+        "gardenoverflow91e33dd0": {}
+      }
+    }
+  }
+}
