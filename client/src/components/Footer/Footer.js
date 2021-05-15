@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import logo from './transparentLogo.png'
+import { Link } from "react-router-dom";
 
 function Footer() {
     return (
@@ -10,15 +11,23 @@ function Footer() {
                     <div className="col-11">
                         <div className="row ">
                             <div className="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
-                            <img src={logo} alt=""  height="150" style={{marginBottom: "20px", marginLeft: "20px"}} className="d-inline-block align-text-top mr-2" />
+                                <img src={logo} alt="" height="150" style={{ marginBottom: "20px", marginLeft: "20px" }} className="d-inline-block align-text-top mr-2" />
                             </div>
                             <div className="col-xl-2 col-md-4 col-sm-4 col-12">
                                 <h6 className="mb-3 mb-lg-4 bold-text "><b>MENU</b></h6>
                                 <ul className="list-unstyled">
-                                    <li>Home</li>
-                                    <li>Login</li>
-                                    <li>Our Mission</li>
-                                    <li>Contact Us</li>
+                                    <li>
+                                        <Link to="/">Home</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/Login">Login</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">Our Mission</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">Contact Us</Link>
+                                    </li>
                                 </ul>
                             </div>
                             <div className="col-xl-2 col-md-4 col-sm-4 col-12">
@@ -48,7 +57,7 @@ function Footer() {
                     </div>
                 </div>
             </footer>
-         </div>
+        </div>
     )
 }
 
