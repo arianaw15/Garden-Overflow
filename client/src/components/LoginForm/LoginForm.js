@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 import logo from './TransparentFullLogo.png'
-import Login from '../Login/Login'
+import LoginGoogle from '../Login/LoginGoogle'
 
 function UserLogin() {
   return (
@@ -20,7 +20,9 @@ function UserLogin() {
         <input type="password" className="form-control" id="exampleInputPassword1" />
       </div>
       <button type="submit" className="btn btn-primary">Submit</button>
-      <Login />
+      <div className="google">
+      <LoginGoogle />
+      </div>
     </form>
   )
 }

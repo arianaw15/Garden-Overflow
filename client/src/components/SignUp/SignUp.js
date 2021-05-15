@@ -1,39 +1,41 @@
-import React, { useState } from 'react';
-import './index.css'
-import UserPool from '../../UserPool'
+import React from 'react';
+import '../../App.css';
+import Footer from '../Footer/Footer';
+import Amplify from 'aws-amplify';
+import { AmplifyAuthenticator, AmplifySignUp, AmplifySignOut } from '@aws-amplify/ui-react';
+import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components';
+import awsconfig from '../../aws-exports';
 
-const SignUp = () => {
-    const [email, setEmail] = useState("");
-        const [password, setPassword] = useState("")
-    const onSubmit = (event) => {
-        event.preventDefault();
+Amplify.configure(awsconfig);
 
-        UserPool.signUp(email, password, [], null, (err, data) => {
-            if (err) {
-                console.log(err);
-            }
-            console.log(data)
-        })
-    };
+const AuthStateApp = () => {
+    const [authState, setAuthState] = React.useState();
+    const [user, setUser] = React.useState();
 
-    return (
-        <div>
-            <form onSubmit={onSubmit}>
-                <label htmlFor="email">Email</label>
-                <input
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                ></input>
-                <label htmlFor="password">Password</label>
-                <input
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-                ></input>
+    React.useEffect(() => {
+        return onAuthUIStateChange((nextAuthState, authData) => {
+            setAuthState(nextAuthState);
+            setUser(authData)
+        });
+    }, []);
 
-                <button type="submit">Signup</button>
-            </form>
-        </div>
-    )
+  return authState === AuthState.SignedIn && user ? (
+      <div className="App">
+          <div>Hello, {user.username}</div>
+          <AmplifySignOut />
+      </div>
+    ) : (
+      <AmplifyAuthenticator>
+        <AmplifySignUp
+          slot="sign-up"
+          formFields={[
+            { type: "email" },
+            { type: "password" }
+          ]}
+        />
+        <Footer />
+      </AmplifyAuthenticator>
+  );
 }
 
-export default SignUp;
+export default AuthStateApp;

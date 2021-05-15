@@ -8,6 +8,10 @@ import Footer from "./components/Footer/Footer";
 import SignUp from "./components/SignUp/SignUp";
 import Zoneforum from "./components/Forum/ZoneForum";
 import Replyboard from "./components/Forum/Replyboard"
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
+import UserProfile from './components/UserProfile/UserProfile';
+Amplify.configure(awsconfig);
 
 
 function App() {
@@ -21,6 +25,7 @@ function App() {
         <Route exact path="/SignUp" component={SignUp} />
         <Route exact path="/ZoneForum" component={Zoneforum} />
         <Route exact path="/Replyboard" component={Replyboard} />
+        <Route exact path="/userprofile" component={UserProfile}/>
         <Route component={NoMatch} />
       </Switch>
       <Footer />
