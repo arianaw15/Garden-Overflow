@@ -1,41 +1,46 @@
-import React from 'react';
-import '../../App.css';
-import Footer from '../Footer/Footer';
-import Amplify from 'aws-amplify';
-import { AmplifyAuthenticator, AmplifySignUp, AmplifySignOut } from '@aws-amplify/ui-react';
-import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components';
-import awsconfig from '../../aws-exports';
 
-Amplify.configure(awsconfig);
+/* eslint-disable default-case */
+import React, {useState, useEffect} from 'react';
+import { AmplifyAuthenticator, withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+import { Hub, Auth } from 'aws-amplify';
+// import LoginGoogle from '../Login/LoginGoogle';
 
-const AuthStateApp = () => {
-    const [authState, setAuthState] = React.useState();
-    const [user, setUser] = React.useState();
+function App() {
+  const [user, setUser] = useState(null);
 
-    React.useEffect(() => {
-        return onAuthUIStateChange((nextAuthState, authData) => {
-            setAuthState(nextAuthState);
-            setUser(authData)
-        });
-    }, []);
+  useEffect(() => {
+    Hub.listen('auth', ({ payload: { event, data } }) => {
+      switch (event) {
+        case 'signIn':
+        case 'cognitoHostedUI':
+          getUser().then(userData => setUser(userData));
+          break;
+        case 'signOut':
+          setUser(null);
+          break;
+        case 'signIn_failure':
+        case 'cognitoHostedUI_failure':
+          console.log('Sign in failure', data);
+          break;
+      }
+    });
 
-  return authState === AuthState.SignedIn && user ? (
-      <div className="App">
-          <div>Hello, {user.username}</div>
-          <AmplifySignOut />
-      </div>
-    ) : (
-      <AmplifyAuthenticator>
-        <AmplifySignUp
-          slot="sign-up"
-          formFields={[
-            { type: "email" },
-            { type: "password" }
-          ]}
-        />
-        <Footer />
-      </AmplifyAuthenticator>
-  );
+    getUser().then(userData => setUser(userData));
+  }, []);
+
+  function getUser() {
+    return Auth.currentAuthenticatedUser()
+      .then(userData => userData)
+      .catch(() => console.log('Not signed in'));
+  }
+
+  return(
+    <AmplifyAuthenticator>
+       <button onClick={() => Auth.federatedSignIn({provider: 'Google'})}>Open Google</button>
+    <div className= "App">
+    <AmplifySignOut />
+  </div>  
+  </AmplifyAuthenticator>
+  
+  )
 }
-
-export default AuthStateApp;
