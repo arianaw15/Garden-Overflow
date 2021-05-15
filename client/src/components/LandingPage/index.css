@@ -33,11 +33,11 @@
   }
 
   .card-body {
-    background-color: rgb(8, 28, 54);
+    text-align: center;
   }
 
   .card {
-    opacity: .9;
+    background-color: rgba(8, 28, 54, 0.3);
     color: white;
     border: 0px;
   }
