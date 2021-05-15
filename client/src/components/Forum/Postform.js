@@ -2,6 +2,7 @@ import React from 'react'
 
 const Postform = () => {
     return (
+        <div className="container justify-content-center">
         <form>
         <div className="mb-3">
           <label for="Textarea1" className="form-label">
@@ -16,6 +17,7 @@ const Postform = () => {
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
+      </div>
     )
 }
 
