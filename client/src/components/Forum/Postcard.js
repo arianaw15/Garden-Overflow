@@ -3,6 +3,7 @@ import "./index.css";
 
 const Postcard = ({ username, title, body, zone, tag, email }) => {
   return (
+    
     <div className="row justify-content-md-center">
       <div className="card col">
         <div className="card-header">
@@ -18,6 +19,7 @@ const Postcard = ({ username, title, body, zone, tag, email }) => {
         </div>
       </div>
     </div>
+    
   );
 };
 
