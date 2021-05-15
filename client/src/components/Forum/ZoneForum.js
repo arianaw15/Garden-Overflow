@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import "./index.css";
 import Postcard from "./Postcard";
+import Postform from "./Postform"
 import axios from "axios";
 
 const ZoneForum = () => {
@@ -12,7 +13,7 @@ const ZoneForum = () => {
   return (
     <div>
       <div className="container">
-        
+        <Postform />
         {posts.length ? (posts.map(each => <li key={each.id} ><Postcard {...each} /></li>)) : (<h3>No Posts in this zone currently!</h3>)}
         
       </div>
