@@ -31,3 +31,7 @@ router.put("/addtogarden", (req, res, next) => {
 router.put("/removefromgarden", (req, res, next) => {
     db.Users.findByIdAndUpdate(req.user.id, {"$pull" : {"garden" : req.body.plant}},{ "new" : true, "safe" : true}).then(data => console.log(`garden was updated\n${data}`)).catch(err => res.status(422).json(err));
 });
+
+router.post("/createuser", (req, res, next) => {
+    db.Users.create(req.body).then(data => console.log(`user created \n ${data}`)).catch(err => res.status(422).json(err)); 
+});
