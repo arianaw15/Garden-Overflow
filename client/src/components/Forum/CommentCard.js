@@ -1,8 +1,9 @@
 import React from "react";
 import "./index.css";
 
-const Commentcard = ({ username, body, }) => {
+const Commentcard = ({ username, body }) => {
   return (
+      <li>
     <div className="row justify-content-md-center">
       <div className="card col">
         <div className="card-header">
@@ -13,6 +14,7 @@ const Commentcard = ({ username, body, }) => {
         </div>
       </div>
     </div>
+    </li>
   );
 };
 
