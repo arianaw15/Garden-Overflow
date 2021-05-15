@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 
-const Postcard = ({ username, title, body, zone, tag, email }) => {
+const Postcard = ({ username, title, body, zone, tag }) => {
   return (
     
     <div className="row justify-content-md-center">
