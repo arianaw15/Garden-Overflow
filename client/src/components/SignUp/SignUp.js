@@ -1,3 +1,4 @@
+
 /* eslint-disable default-case */
 import React, {useState, useEffect} from 'react';
 import { AmplifyAuthenticator, withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
@@ -43,5 +44,3 @@ function App() {
   
   )
 }
-
-export default withAuthenticator(App);
