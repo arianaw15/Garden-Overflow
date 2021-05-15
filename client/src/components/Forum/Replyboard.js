@@ -1,19 +1,24 @@
-import React from "react";
+import {React, useState} from "react";
 import './index.css';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 import CommentCard from './CommentCard';
 import axios from 'axios';
 
 const Replyboard = () => {
+    const [comments, setComments] = useState([]);
     let postid;
+  axios
+    .get(`localhost:3001/api/comments/${postid}`)
+    .then((res) => setComments(res.data))
+    .catch((err) => console.log(err));
     return (
         <div>
-            <Header />
+            
         <div className="container commentBoard">
-        {axios.get(`/api/comments/${postid}`).then(result => result.map(each => <CommentCard {...each}/>))}
+            <ul>
+                {comments.length ? (comments.map(each => <li key={each.id}><CommentCard {...each} /></li>)) : (<h3>Be the First to comment!</h3>)}
+            </ul>
         </div>
-            <Footer />
+            
         </div>
     )
 }
