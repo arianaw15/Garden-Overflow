@@ -3,6 +3,7 @@
 import React, {useState, useEffect} from 'react';
 import { AmplifyAuthenticator, withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { Hub, Auth } from 'aws-amplify';
+import AmplifyGoogle from './AmplifyGoogle'
 // import LoginGoogle from '../Login/LoginGoogle';
 
 function SignUp() {
@@ -33,15 +34,18 @@ function SignUp() {
       .then(userData => userData)
       .catch(() => console.log('Not signed in'));
   }
-
+console.log(user)
   return(
+    <>
+    <AmplifyGoogle />
     <AmplifyAuthenticator>
+      
        <button onClick={() => Auth.federatedSignIn({provider: 'Google'})}>Open Google</button>
     <div className= "App">
     <AmplifySignOut />
   </div>  
   </AmplifyAuthenticator>
-  
+  </>
   )
 }
 
