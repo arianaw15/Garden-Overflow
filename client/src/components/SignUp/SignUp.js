@@ -5,7 +5,7 @@ import { AmplifyAuthenticator, withAuthenticator, AmplifySignOut } from '@aws-am
 import { Hub, Auth } from 'aws-amplify';
 // import LoginGoogle from '../Login/LoginGoogle';
 
-function App() {
+function SignUp() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -44,3 +44,5 @@ function App() {
   
   )
 }
+
+export default SignUp
