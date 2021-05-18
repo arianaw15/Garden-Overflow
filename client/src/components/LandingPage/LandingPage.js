@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import * as THREE from "three";
-import BIRDS from 'vanta/src/vanta.birds.js';
-// import logo from './transparentLogo.png'
+import BIRDS from 'vanta/dist/vanta.birds.min';
+import TipsRoulette from './TipsRoulette';
 import './index.css';
 
 function LandingPage() {
@@ -10,7 +9,6 @@ function LandingPage() {
     useEffect(() => {
       if (!vantaEffect) {
         setVantaEffect(BIRDS({
-        THREE,
           el: myRef.current,
           scale: 1.00,
           scaleMobile: 1.00,
@@ -26,16 +24,15 @@ function LandingPage() {
 
     return (
       <div ref={myRef} id="birdBackground">
-          {/* <img src={logo} alt="Garden Overflow" className="imgLogo" /> */}
         <div className="container">
           <div className="row">
             <div className="col align-self-center">
               <div className="card w-75 mx-auto"> 
                 <div className="card-body p-2">
-                  <h4 className="text-center pb-2">Gardening Tip of the Day:</h4>
+                  <h4 className="text-center pb-2">Gardening Pro Tips:</h4>
                   <div className="card w-100 mx-auto">
                     <div className="card-body">
-                      Tip of the day placeholder!
+                      <TipsRoulette />
                     </div>
                   </div>
                 </div>
