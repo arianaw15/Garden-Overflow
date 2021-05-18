@@ -4,10 +4,13 @@ import React, {useState, useEffect} from 'react';
 import { AmplifyAuthenticator, withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { Hub, Auth } from 'aws-amplify';
 import AmplifyGoogle from './AmplifyGoogle'
+import userState from '../../utils/UserState';
+import { useRecoilState } from 'recoil';
+import { Redirect } from 'react-router';
 // import LoginGoogle from '../Login/LoginGoogle';
 
 function SignUp() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useRecoilState(userState);
 
   useEffect(() => {
     Hub.listen('auth', ({ payload: { event, data } }) => {
@@ -31,11 +34,11 @@ function SignUp() {
 
   function getUser() {
     return Auth.currentAuthenticatedUser()
-      .then(userData => userData)
+      .then(userData => userData.attributes)
       .catch(() => console.log('Not signed in'));
   }
 console.log(user)
-  return(
+  return user ? <Redirect to = {'/userprofile'} /> : (
     <>
     <AmplifyGoogle />
     <AmplifyAuthenticator>
