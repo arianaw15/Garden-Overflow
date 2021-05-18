@@ -41,3 +41,18 @@
     color: white;
     border: 0px;
   }
+
+  @media screen and (max-width: 1000px) {
+    #nt-example3 {
+      font-size: 12px !important;
+      
+    }
+
+  }
+  @media screen and (min-width: 1001px) {
+    #nt-example3 {
+      font-size: 18px !important;
+      
+    }
+
+  }
