@@ -12,6 +12,9 @@ import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import UserProfile from './components/UserProfile/UserProfile';
 import { RecoilRoot } from 'recoil';
+import AmpSignIn from './components/SignUp/AmplifySignIn';
+import SignOut from './components/SignUp/AmplifySignOut';
+import AmpSignUp from './components/SignUp/AmplifySignUp';
 Amplify.configure(awsconfig);
 
 
@@ -23,11 +26,12 @@ function App() {
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/Home" component={LandingPage} />
-        <Route exact path="/Login" component={LoginForm} />
-        <Route exact path="/SignUp" component={SignUp} />
+        <Route exact path="/Login" component={AmpSignIn} />
+        <Route exact path="/SignUp" component={AmpSignUp} />
         <Route exact path="/ZoneForum" component={Zoneforum} />
         <Route exact path="/Replyboard" component={Replyboard} />
         <Route exact path="/userprofile" component={UserProfile}/>
+        <Route exact path="/SignOut" component={SignOut}/>
         <Route component={NoMatch} />
       </Switch>
       <Footer />

@@ -18,9 +18,8 @@ const SignOut = () => {
         });
     }, []);
 
-  return authState === AuthState.SignedIn && user ? (
-      <div className="App">
-          <div>Hello, {user.username}</div>
+  return(
+      <div>
           <AmplifySignOut />
       </div>
     );

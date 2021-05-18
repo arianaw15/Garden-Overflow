@@ -10,6 +10,7 @@ function Pagination() {
             <a className="nav-link" href="/SignUp">Create Account</a>
             <a className="nav-link" href="/Zoneforum">MyZone</a>
             <a className="nav-link" href="/userProfile">My Profile</a>
+            <a className="nav-link" href="/SignOut">Sign Out</a>
             {/* <a className="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">Disabled</a> */}
         </div>
     </div>
