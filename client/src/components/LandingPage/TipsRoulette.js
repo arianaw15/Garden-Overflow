@@ -52,7 +52,7 @@ function TipsRoulette() {
       <>
          <NewsTicker
             id="nt-example3"
-            rowHeight={25}
+            rowHeight={45}
             maxRows={2}
             duration={duration}
             speed={speed}
@@ -78,10 +78,10 @@ function TipsRoulette() {
             {/* <div style={{'fontSize': '36px'}}>
                Click the button to get a random tip!
             </div> */}
-            <div>Make a drip feeder using a 2 liter bottle to hydrate plants that do better when water is supplied directly at the root instead of from overhead, such as vegetables. <a href="https://www.diyncrafts.com/12126/home/gardening/100-expert-gardening-tips-ideas-and-projects-that-every-gardener-should-know#Make_a_drip_feeder_using_an_old_soda_bottle">Click here for full details!</a></div>
-            <div>If you're growing tomatoes, especially in a drier climate (zones x, y, z), be sure you're watering them from the base instead of drenching the leaves. <a href="https://www.diyncrafts.com/12126/home/gardening/100-expert-gardening-tips-ideas-and-projects-that-every-gardener-should-know#Water_your_tomatoes_the_right_way">Click here for full details!</a></div>
-            <div>Sprinkle some baking soda on the soil around your tomato plants to neutralize acidity in the soil and produce sweeter tomatoes! < a href ="https://www.diyncrafts.com/12126/home/gardening/100-expert-gardening-tips-ideas-and-projects-that-every-gardener-should-know#Grow_sweeter_tomatoes_using_baking_soda">Click here for more details!</a></div>
-            <div>Plant a cluster of certain herbs together to make a natural mosquito repellent! <a href = "https://www.diyncrafts.com/12126/home/gardening/100-expert-gardening-tips-ideas-and-projects-that-every-gardener-should-know#Mosquito_control_herbs">Click here for full details!</a></div>
+            <div>Make a drip feeder using a 2 liter bottle to hydrate plants that do better when water is supplied directly at the root instead of from overhead, such as vegetables. <a href="https://www.diyncrafts.com/12126/home/gardening/100-expert-gardening-tips-ideas-and-projects-that-every-gardener-should-know#Make_a_drip_feeder_using_an_old_soda_bottle">Click here for full details!</a><p></p><hr></hr></div>
+            <div>If you're growing tomatoes, especially in a drier climate (zones x, y, z), be sure you're watering them from the base instead of drenching the leaves. <a href="https://www.diyncrafts.com/12126/home/gardening/100-expert-gardening-tips-ideas-and-projects-that-every-gardener-should-know#Water_your_tomatoes_the_right_way">Click here for full details!</a><p></p><hr></hr></div>
+            <div>Sprinkle some baking soda on the soil around your tomato plants to neutralize acidity in the soil and produce sweeter tomatoes! < a href ="https://www.diyncrafts.com/12126/home/gardening/100-expert-gardening-tips-ideas-and-projects-that-every-gardener-should-know#Grow_sweeter_tomatoes_using_baking_soda">Click here for more details!</a><p></p><hr></hr></div>
+            <div>Plant a cluster of certain herbs together to make a natural mosquito repellent! <a href = "https://www.diyncrafts.com/12126/home/gardening/100-expert-gardening-tips-ideas-and-projects-that-every-gardener-should-know#Mosquito_control_herbs">Click here for full details!</a><p></p><hr></hr></div>
          </NewsTicker>
          <span className="button mt-2" id="nt-example3-button" onClick={startSpin}>
             {getButtonContent()}

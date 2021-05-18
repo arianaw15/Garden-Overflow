@@ -9,7 +9,7 @@ function UserProfile() {
         <div className="bg-white shadow rounded overflow-hidden">
             <div className="px-4 pt-0 pb-4 cover">
                 <div className="media align-items-end profile-head">
-                    <div className="profile mr-3"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="..." width="130" className="rounded mb-2 img-thumbnail" /><a href="/" id="editButton" className="btn btn-outline-dark btn-sm btn-block">Edit profile</a></div>
+                    <div className="profile mr-3"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="..." width="130" className="rounded mb-2 img-thumbnail" /><a href="/" id="editButton" className="btn btn-outline-dark btn-sm btn-block">Edit Profile</a></div>
                     <div className="media-body mb-5 text-white">
                         <h4 className="mt-0 mb-0">Test User</h4>
                         <p className="small mb-4"> <i className="fas fa-map-marker-alt mr-2"></i>Salt Lake City</p>
