@@ -45,7 +45,7 @@
     padding: 15px;
   }
 
-  @media screen and (max-width: 990px) {
+  @media screen and (max-width: 790px) {
     #nt-example3 {
       font-size: 12px !important;
       
@@ -53,7 +53,7 @@
 
   }
 
-  @media screen and (min-width: 991px) {
+  @media screen and (min-width: 791px) {
     #nt-example3 {
       font-size: 18px !important;
       
