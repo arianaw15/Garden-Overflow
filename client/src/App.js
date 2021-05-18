@@ -11,11 +11,13 @@ import Replyboard from "./components/Forum/Replyboard"
 import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import UserProfile from './components/UserProfile/UserProfile';
+import { RecoilRoot } from 'recoil';
 Amplify.configure(awsconfig);
 
 
 function App() {
   return (
+    <RecoilRoot>
     <Router>
       <Header />
       <Switch>
@@ -30,6 +32,7 @@ function App() {
       </Switch>
       <Footer />
     </Router>
+    </RecoilRoot>
   );
 }
 
