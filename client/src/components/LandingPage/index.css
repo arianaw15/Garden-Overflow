@@ -41,17 +41,29 @@
     color: white;
     border: 0px;
   }
+  .lineSpacing {
+    padding: 15px;
+  }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 990px) {
     #nt-example3 {
       font-size: 12px !important;
       
     }
 
   }
-  @media screen and (min-width: 1001px) {
+
+  @media screen and (min-width: 991px) {
     #nt-example3 {
       font-size: 18px !important;
+      
+    }
+
+  }
+
+  @media screen and (max-width: 400px) {
+    #nt-example3 {
+      font-size: 10px !important;
       
     }
 
