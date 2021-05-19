@@ -42,3 +42,7 @@
   --amplify-primary-tint: #E8871E;
   --amplify-primary-shade: #92FF9E;
 }
+
+body {
+  background: white;
+}

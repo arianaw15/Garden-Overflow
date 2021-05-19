@@ -1,40 +1,70 @@
-/* eslint-disable default-case */
-import Amplify, { Auth, Hub } from 'aws-amplify';
-import React, {Component} from 'react';
-import awsconfig from '../../aws-exports';
-Amplify.configure(awsconfig);
+import React, { useEffect } from 'react';
+import { Auth } from 'aws-amplify';
+// To federated sign in from Google
+const AmplifyGoogle = () => {
 
-class AmplifyGoogle extends Component {
-  state = { user: null, customState: null };
+    useEffect(() => {
+        const ga = window.gapi && window.gapi.auth2 ? 
+            window.gapi.auth2.getAuthInstance() : 
+            null;
 
-  componentDidMount() {
-    Hub.listen("auth", ({ payload: { event, data } }) => {
-      switch (event) {
-        case "signIn":
-          this.setState({ user: data });
-          break;
-        case "signOut":
-          this.setState({ user: null });
-          break;
-        case "customOAuthState":
-          this.setState({ customState: data });
-      }
-    });
+        if (!ga) createScript();
+    }, [])
 
-    Auth.currentAuthenticatedUser()
-      .then(user => this.setState({ user }))
-      .catch(() => console.log("Not signed in"));
-  }
+    const signIn = () => {
+        const ga = window.gapi.auth2.getAuthInstance();
+        ga.signIn().then(
+            googleUser => {
+                getAWSCredentials(googleUser);
+            },
+            error => {
+                console.log(error);
+            }
+        );
+    }
 
-  render() {
-    const { user } = this.state;
+    const getAWSCredentials = async (googleUser) => {
+        const { id_token, expires_at } = googleUser.getAuthResponse();
+        const profile = googleUser.getBasicProfile();
+        let user = {
+            email: profile.getEmail(),
+            name: profile.getName()
+        };
+
+        const credentials = await Auth.federatedSignIn(
+            'google',
+            { token: id_token, expires_at },
+            user
+        );
+        console.log('credentials', credentials);
+    }
+
+    const createScript = () => {
+        // load the Google SDK
+        const script = document.createElement('script');
+        script.src = 'https://apis.google.com/js/platform.js';
+        script.async = true;
+        script.onload = initGapi;
+        document.body.appendChild(script);
+    }
+
+    const initGapi = () => {
+        // init the Google SDK client
+        const g = window.gapi;
+        g.load('auth2', function() {
+            g.auth2.init({
+                client_id: '175590003618-r1inp9njjg3vbdkc1kvol0t5orm0bnaa.apps.googleusercontent.com',
+                // authorized scopes
+                scope: 'profile email openid'
+            });
+        });
+    }
 
     return (
-      <div className="App">
-        <button onClick={() => Auth.federatedSignIn({provider: 'Google'})}>Sign Up With Google</button>
-      </div>
+        <div>
+            <button onClick={signIn}>Sign In With Google</button>
+        </div>
     );
-  }
 }
 
-export default AmplifyGoogle;
+export default AmplifyGoogle

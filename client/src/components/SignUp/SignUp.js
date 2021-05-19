@@ -3,10 +3,14 @@
 import React, {useState, useEffect} from 'react';
 import { AmplifyAuthenticator, withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { Hub, Auth } from 'aws-amplify';
+import AmplifyGoogle from './AmplifyGoogle'
+import userState from '../../utils/UserState';
+import { useRecoilState } from 'recoil';
+import { Redirect } from 'react-router';
 // import LoginGoogle from '../Login/LoginGoogle';
 
-function App() {
-  const [user, setUser] = useState(null);
+function SignUp() {
+  const [user, setUser] = useRecoilState(userState);
 
   useEffect(() => {
     Hub.listen('auth', ({ payload: { event, data } }) => {
@@ -30,17 +34,22 @@ function App() {
 
   function getUser() {
     return Auth.currentAuthenticatedUser()
-      .then(userData => userData)
+      .then(userData => userData.attributes)
       .catch(() => console.log('Not signed in'));
   }
-
-  return(
+console.log(user)
+  return user ? <Redirect to = {'/userprofile'} /> : (
+    <>
+    <AmplifyGoogle />
     <AmplifyAuthenticator>
+      
        <button onClick={() => Auth.federatedSignIn({provider: 'Google'})}>Open Google</button>
     <div className= "App">
     <AmplifySignOut />
   </div>  
   </AmplifyAuthenticator>
-  
+  </>
   )
 }
+
+export default SignUp

@@ -5,8 +5,8 @@ const Postform = () => {
     <div className="container justify-content-center">
       <form>
         <div className="mb-3">
-          <label for="Textarea1" className="form-label">
-            Your Post's Title
+          <label htmlFor="Textarea1" className="form-label">
+            Your Post
           </label>
           <textarea
             className="form-control"
