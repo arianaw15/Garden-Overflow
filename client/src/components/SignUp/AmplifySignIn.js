@@ -12,16 +12,6 @@ import { Redirect } from 'react-router';
 Amplify.configure(awsconfig);
 
 const AmpSignIn = () => {
-    // const [authState, setAuthState] = React.useState();
-    // const [user, setUser] = React.useState();
-
-    // React.useEffect(() => {
-    //     return onAuthUIStateChange((nextAuthState, authData) => {
-    //         setAuthState(nextAuthState);
-    //         setUser(authData)
-    //     });
-    // }, []);
-
     const [user, setUser] = useRecoilState(userState);
 
   useEffect(() => {
