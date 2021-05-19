@@ -53,7 +53,7 @@ const AmplifyGoogle = () => {
         const g = window.gapi;
         g.load('auth2', function() {
             g.auth2.init({
-                client_id: 'your_google_client_id',
+                client_id: '175590003618-r1inp9njjg3vbdkc1kvol0t5orm0bnaa.apps.googleusercontent.com',
                 // authorized scopes
                 scope: 'profile email openid'
             });
@@ -62,7 +62,7 @@ const AmplifyGoogle = () => {
 
     return (
         <div>
-            <button onClick={signIn}>Sign Up With Google</button>
+            <button onClick={signIn}>Sign In With Google</button>
         </div>
     );
 }
