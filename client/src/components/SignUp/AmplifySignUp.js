@@ -57,9 +57,6 @@ function AmpSignUp() {
   return user ? <Redirect to = {'/userprofile'} /> : (
       
         <div>
-            <div>
-        <AmplifyGoogle />
-        </div>
             <AmplifySignUp className="amplify-signup"
           slot="sign-up"
           formFields={[
