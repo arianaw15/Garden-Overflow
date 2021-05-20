@@ -61,9 +61,9 @@ const AmplifyGoogle = () => {
     }
 
     return (
-        <div>
-            <button onClick={signIn}>Sign In With Google</button>
-        </div>
+        <>
+            <button onClick={signIn} className="googleLogin">Sign In With Google</button>
+        </>
     );
 }
 
