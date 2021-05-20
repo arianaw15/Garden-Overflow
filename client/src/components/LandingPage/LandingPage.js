@@ -24,13 +24,13 @@ function LandingPage() {
 
     return (
       <div ref={myRef} id="birdBackground">
-        <div className="container">
+        <div className="container bird-container">
           <div className="row">
             <div className="col align-self-center">
-              <div className="card w-75 mx-auto"> 
+              <div className="card w-75 mx-auto" id="frontBirdCard"> 
                 <div className="card-body p-2">
                   <h4 className="text-center pb-2">Gardening Pro Tips:</h4>
-                  <div className="card w-100 mx-auto">
+                  <div className="card w-100 mx-auto" id="frontBirdCard">
                     <div className="card-body">
                       <TipsRoulette />
                     </div>
