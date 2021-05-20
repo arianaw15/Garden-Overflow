@@ -3,7 +3,6 @@ import "./index.css";
 import Postcard from "./Postcard";
 import Postform from "./Postform";
 import axios from "axios";
-import "./index.css";
 
 const postArr = [
   {userName : "Plantnerd",

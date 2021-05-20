@@ -6,7 +6,7 @@ import LoginForm from "./components/LoginForm/LoginForm";
 import NoMatch from "./components/NoMatch/NoMatch";
 import Footer from "./components/Footer/Footer";
 import Zoneforum from "./components/Forum/ZoneForum";
-import Replyboard from "./components/Forum/Replyboard"
+import Replyboard from "./components/Forum/Replyboard";
 import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import UserProfile from './components/UserProfile/UserProfile';
