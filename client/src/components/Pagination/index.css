@@ -1,4 +1,11 @@
 amplify-sign-out {
-    position: absolute;
-    right: 10px;
+    position: relative;
+    left: 0px;
+    top: 0px;
 }
+
+:root {
+    --amplify-primary-color: #ff6347;
+    --amplify-primary-tint: #ff7359;
+    --amplify-primary-shade: #e0573e;
+  }

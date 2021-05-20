@@ -22,7 +22,7 @@
     
     /* Shine effect */
     position: absolute;
-    top: 15vh;
+    top: 120px;
     left: 50%;
     transform: translate(-50%,-50%);
     padding: 12px 48px;
@@ -50,4 +50,9 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%,-50%);
+}
+
+amplify-sign-in {
+  position: relative;
+  top: 40px;
 }
