@@ -28,7 +28,6 @@ function UserProfile() {
                 </div>
             </div>
             {/* <div className="bg-light p-4 d-flex justify-content-end text-center">
-
                 <ul className="list-inline mb-0">
                     <li className="list-inline-item">
                         <h5 className="font-weight-bold mb-0 d-block">215</h5><small className="text-muted"> <i className="fas fa-image mr-1"></i>Photos</small>
