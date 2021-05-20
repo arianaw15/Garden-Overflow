@@ -5,7 +5,7 @@ function Pagination() {
     return (
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
-            <a className="nav-link active" href="/Home">Home <span className="sr-only">(current)</span></a>
+            <a className="nav-link" href="/Home">Home <span className="sr-only">(current)</span></a>
             <a className="nav-link" href="/Login">Login</a>
             <a className="nav-link" href="/SignUp">Create Account</a>
             <a className="nav-link" href="/Zoneforum">MyZone</a>
