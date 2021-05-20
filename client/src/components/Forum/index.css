@@ -93,6 +93,10 @@ select {
     letter-spacing: 1px;
 }
 
+.card-header {
+    background-color: rgba(94, 141, 156, 0.678);
+}
+
 #welcomeZone {
     font-family: 'Julius Sans One', sans-serif;
     font-weight: 700;
@@ -104,5 +108,9 @@ select {
 }
 
 #zonePostCards {
-    box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+    box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);}
+    
+#commentform {
+    margin-bottom: 80px;
+    width: 60%;
 }

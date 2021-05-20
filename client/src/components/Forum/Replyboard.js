@@ -44,7 +44,7 @@ const Replyboard = () => {
       <ul className="postlist">
         {comments.length ? (
           comments.map((each) => (
-            <li key={each.id}>
+            <li key={each.id} className="post">
               <CommentCard {...each} />
             </li>
           ))
