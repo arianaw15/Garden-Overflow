@@ -5,7 +5,7 @@ const Postcard = ({ userName, title, body, zone, tag }) => {
   return (
     
     <div className="row justify-content-md-center">
-      <div className="card col">
+      <div className="card col" id="zonePostCards">
         <div className="card-header">
           <span className="username">{userName}</span> Posted to Zone: {zone}
         </div>
