@@ -1,21 +1,39 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import "./index.css";
 import Postcard from "./Postcard";
-import Postform from "./Postform"
+import Postform from "./Postform";
 import axios from "axios";
 
 const ZoneForum = () => {
   const [posts, setPosts] = useState([]);
-  axios
-    .get("localhost:3001/api/zoneposts/7")
-    .then((res) => setPosts(res.data))
-    .catch((err) => console.log(err));
+
+  useEffect(() => {
+     try {
+      const result = fetch("http://localhost:3001/api/zoneposts/7", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      });
+      setPosts(result);
+      
+    } catch (err) {
+      console.error();
+    }  
+    console.log(posts);
+  }, [])
+  
   return (
     <div>
       <div className="container">
         <Postform />
-        {posts.length ? (posts.map(each => <li key={each.id} ><Postcard {...each} /></li>)) : (<h3>No Posts in this zone currently!</h3>)}
-        
+        {posts.length ? (
+          posts.map((each) => (
+            <li key={each.id}>
+              <Postcard {...each} />
+            </li>
+          ))
+        ) : (
+          <h3>No Posts in this zone currently!</h3>
+        )}
       </div>
     </div>
   );

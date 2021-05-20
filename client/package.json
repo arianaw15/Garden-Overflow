@@ -2,6 +2,7 @@
   "name": "gardenoverflow",
   "version": "0.1.0",
   "private": true,
+  "proxy" : "http://localhost:3001/",
   "dependencies": {
     "@aws-amplify/ui-react": "^1.1.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
