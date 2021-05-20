@@ -17,7 +17,8 @@ const Postform = () => {
           ></textarea>
         </div>
         
-        <select className="form-select" aria-label="TagSelect" name="tag">
+        {/* <select className="form-select" aria-label="TagSelect" name="tag"> */}
+        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
           <option selected>What type of post is this?</option>
           <option value="Question">Question</option>
           <option value="Request">Request</option>
@@ -25,7 +26,8 @@ const Postform = () => {
           <option value="Advice">Advice</option>
           <option value="Rant">Rant</option>
           <option value="GardenBrag">GardenBrag</option>
-        </select>
+          </select>
+        {/* </select> */}
         <div className="mb-3">
           <label for="Textarea2" className="form-label">
             Your Post's Content

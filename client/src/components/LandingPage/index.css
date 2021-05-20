@@ -4,10 +4,6 @@
     margin-bottom: -250px;
   }
 
-  body {
-    background: #fff;
-    /* padding: 20px; */
-  }
   .vanta { 
     min-height: 300px;
     color: white;
@@ -26,7 +22,7 @@
 
   }
 
-  .container {
+  .bird-container {
     position: absolute;
     top: 220px;
     /* background-color: rgba(8, 28, 54, 0.671); */
@@ -36,11 +32,12 @@
     text-align: center;
   }
 
-  .card {
+  #frontBirdCard {
     background-color: rgba(8, 28, 54, 0.3);
     color: white;
     border: 0px;
   }
+
   .lineSpacing {
     padding: 15px;
   }

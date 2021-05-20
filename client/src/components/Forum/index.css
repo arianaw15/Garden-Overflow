@@ -96,4 +96,9 @@ select {
 #welcomeZone {
     font-family: 'Julius Sans One', sans-serif;
     font-weight: 700;
+    text-align: center;
+}
+
+#inlineFormCustomSelect {
+    width: 240px;
 }
