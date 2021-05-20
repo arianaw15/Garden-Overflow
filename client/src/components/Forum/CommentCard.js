@@ -1,20 +1,19 @@
 import React from "react";
 import "./index.css";
 
-const Commentcard = ({ username, body }) => {
+const Commentcard = ({ userName, body }) => {
   return (
-      <li>
     <div className="row justify-content-md-center">
       <div className="card col">
         <div className="card-header">
-          <a href="#">{username}</a>
+          <span className="username">{userName}</span>
         </div>
         <div className="card-body">
           <p className="card-text">{body}</p>
         </div>
       </div>
     </div>
-    </li>
+    
   );
 };
 

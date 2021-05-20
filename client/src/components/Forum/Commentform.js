@@ -2,7 +2,7 @@ import React from "react";
 
 const Commentform = ({ postid }) => {
   return (
-        <div className="container justify-content-center">
+      <div className="formtainer">
       <form>
         <div className="mb-3">
           <label htmlFor="Textarea1" className="form-label">
@@ -14,8 +14,8 @@ const Commentform = ({ postid }) => {
             rows="3"
             name="body"
           ></textarea>
-        </div>
         <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
       </form>
       </div>
     
