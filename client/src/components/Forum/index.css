@@ -1,4 +1,94 @@
+/* zone forum styles */
+
+.forumWelcome {
+    margin: 40px;
+}
+
+.postlist {
+    list-style: none;
+}
+
+.post {
+    margin: 15px;
+}
+
+/* post form styles */
+
+.formtainer {
+    margin: 40px 40px;
+    padding: 20px;
+    border: black solid 1px;
+    border-radius: 15px;
+}
+
 #postSubmitButton {
     position: relative;
     top: 30px;
 }
+
+select {
+    margin-bottom: 15px;
+}
+
+/* postcard styles */
+
+.username {
+    color: #82FF9E;
+    text-decoration: underline;
+}
+
+/* tag Badges */
+
+.Rant {
+    border: white solid 1px;
+    border-radius: 5px;
+    padding: 0px 5px;
+    background-color: rgb(255, 53, 17);
+}
+
+.Advice {
+    border: white solid 1px;
+    border-radius: 5px;
+    padding: 0px 5px;
+    background-color: rgb(132, 2, 165);
+}
+
+.Article {
+    border: white solid 1px;
+    border-radius: 5px;
+    padding: 0px 5px;
+    background-color: rgb(10, 163, 173);
+}
+
+.Request {
+    border: white solid 1px;
+    border-radius: 5px;
+    padding: 0px 5px;
+    background-color: rgb(56, 184, 5);
+}
+
+.Question {
+    color: black;
+    border: black solid 1px;
+    border-radius: 5px;
+    padding: 0px 5px;
+    background-color: rgb(255, 231, 17);
+}
+
+.GardenBrag {
+    color: black;
+    border: black solid 1px;
+    border-radius: 5px;
+    padding: 0px 5px;
+    background-color: rgb(253, 165, 2);
+}
+
+
+.replyLink {   
+    transition: .3s;
+}
+
+.replyLink:hover {
+    letter-spacing: 1px;
+}
+
