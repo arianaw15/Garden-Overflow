@@ -1,4 +1,5 @@
 /* zone forum styles */
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
 .forumWelcome {
     margin: 40px;
@@ -92,3 +93,7 @@ select {
     letter-spacing: 1px;
 }
 
+#welcomeZone {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 700;
+}

@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header.js';
 import LandingPage from './components/LandingPage/LandingPage.js';
 import LoginForm from "./components/LoginForm/LoginForm";

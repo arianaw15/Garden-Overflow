@@ -54,7 +54,7 @@ const ZoneForum = () => {
   return (
     <div>
       <div className="row justify-content-center forumWelcome">
-      <h2>Welcome to the Zone {posts[0].zone} Forum!</h2>
+      <h2 id="welcomeZone">Welcome to the Zone {posts[0].zone} Forum!</h2>
       </div>
       <Postform />
 
