@@ -19,13 +19,13 @@ function TipsRoulette() {
       else if (currentState === TickerStates.Running)
          return (
             <>
-               <span className="ml-2">Stop</span>
+               <span className="ml-2" id="stopSpinner">Stop</span>
             </>
          );
       else
          return (
             <>
-               <span className="ml-2">Spin for a new tip!</span>
+               <button className="ml-2" id="tipSpinner">Spin for a new tip!</button>
             </>
          );
    };

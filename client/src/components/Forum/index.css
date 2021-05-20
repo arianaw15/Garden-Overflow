@@ -107,6 +107,9 @@ select {
     width: 240px;
 }
 
+#zonePostCards {
+    box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);}
+    
 #commentform {
     margin-bottom: 80px;
     width: 60%;
