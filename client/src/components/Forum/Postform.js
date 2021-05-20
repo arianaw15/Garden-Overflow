@@ -3,7 +3,7 @@ import "./index.css";
 
 const Postform = () => {
     return (
-        <div>
+        <div className="formtainer">
         <form>
         <div className="mb-3">
           <label htmlFor="Textarea1" className="form-label">

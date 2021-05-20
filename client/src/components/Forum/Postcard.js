@@ -1,19 +1,20 @@
 import React from "react";
 import "./index.css";
 
-const Postcard = ({ username, title, body, zone, tag }) => {
+const Postcard = ({ userName, title, body, zone, tag }) => {
   return (
     
     <div className="row justify-content-md-center">
       <div className="card col">
         <div className="card-header">
-          <a href="#">{username}</a> Posted to Zone: {zone}
+          <span className="username">{userName}</span> Posted to Zone: {zone}
         </div>
         <div className="card-body">
-          <h4 className="card-title">{title}</h4>
-          <h6 className="card-subtitle mb-2 text-muted">{tag}</h6>
-          <p className="card-text">{body}</p>
-          <a href="/Replyboard" className="card-link">
+          <h4 className="card-title postTitle">{title}</h4>
+          <hr></hr>
+          <h6 className="card-subtitle mb-2"><span className={tag}>{tag}</span></h6>
+          <p className="card-text postBody">{body}</p>
+          <a href="/Replyboard" className="card-link replyLink">
             View replies
           </a>
         </div>

@@ -7,10 +7,7 @@ import axios from 'axios';
 const Replyboard = () => {
     const [comments, setComments] = useState([]);
     let postid;
-  axios
-    .get(`localhost:3001/api/comments/${postid}`)
-    .then((res) => setComments(res.data))
-    .catch((err) => console.log(err));
+  
     return (
         <div>
             
