@@ -93,6 +93,10 @@ select {
     letter-spacing: 1px;
 }
 
+.card-header {
+    background-color: rgba(94, 141, 156, 0.678);
+}
+
 #welcomeZone {
     font-family: 'Julius Sans One', sans-serif;
     font-weight: 700;
@@ -101,4 +105,9 @@ select {
 
 #inlineFormCustomSelect {
     width: 240px;
+}
+
+#commentform {
+    margin-bottom: 80px;
+    width: 60%;
 }
