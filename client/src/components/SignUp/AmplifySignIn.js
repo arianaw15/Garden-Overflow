@@ -9,6 +9,7 @@ import userState from '../../utils/UserState';
 import { useRecoilState } from 'recoil';
 import { Redirect } from 'react-router';
 import AmplifyGoogle from './AmplifyGoogle';
+import LoginGoogle from '../Login/LoginGoogle';
 
 Amplify.configure(awsconfig);
 
@@ -43,14 +44,19 @@ const AmpSignIn = () => {
 
   return user ? <Redirect to = {'/userprofile'} /> :(
     <>
-    <AmplifyGoogle />
-        <AmplifyAuthenticator>
+      <h6 className="userLogin">Welcome Back!</h6>
+      <AmplifyAuthenticator>
         <AmplifySignIn
           headerText="Sign In To Garden Overflow"
           slot="sign-in"
-        ></AmplifySignIn>
+        >
+        </AmplifySignIn>
+      <div>
+      </div>
       </AmplifyAuthenticator>
-      </>
+      <AmplifyGoogle className="googleLogin" />
+      
+    </>
   );
 }
 
