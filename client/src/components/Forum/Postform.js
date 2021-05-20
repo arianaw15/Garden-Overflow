@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import "./index.css";
 
 const Postform = () => {
     return (
-        <div className="container justify-content-center">
+        <div>
         <form>
         <div className="mb-3">
           <label htmlFor="Textarea1" className="form-label">
@@ -15,7 +16,7 @@ const Postform = () => {
             name="body"
           ></textarea>
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-primary" id="postSubmitButton">Submit</button>
       </form>
       </div>
     )
