@@ -5,7 +5,6 @@ import LandingPage from './components/LandingPage/LandingPage.js';
 import LoginForm from "./components/LoginForm/LoginForm";
 import NoMatch from "./components/NoMatch/NoMatch";
 import Footer from "./components/Footer/Footer";
-import SignUp from "./components/SignUp/SignUp";
 import Zoneforum from "./components/Forum/ZoneForum";
 import Replyboard from "./components/Forum/Replyboard"
 import Amplify, { Auth } from 'aws-amplify';
