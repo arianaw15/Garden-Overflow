@@ -22,7 +22,7 @@
     
     /* Shine effect */
     position: absolute;
-    top: 100px;
+    top: 15vh;
     left: 50%;
     transform: translate(-50%,-50%);
     padding: 12px 48px;
@@ -45,10 +45,9 @@
 
 .googleLogin {
   font-family: 'Secular One', sans-serif;
-  background: red;
+  background: #DB4437;
   width: 25rem;
   position: absolute;
-  margin-left: 50rem;
-  margin-right: 50rem;
-
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
