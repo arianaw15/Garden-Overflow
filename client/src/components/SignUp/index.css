@@ -56,3 +56,8 @@ amplify-sign-in {
   position: relative;
   top: 40px;
 }
+
+amplify-sign-up {
+  position: relative;
+  top: 60px;
+}

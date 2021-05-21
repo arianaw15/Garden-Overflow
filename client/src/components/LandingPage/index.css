@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap'); */
 
 #birdBackground {
     width: 100%; 
@@ -60,7 +60,7 @@
     color: #fff !important;
     text-transform: uppercase;
     text-decoration: none;
-    background: #f3a600;
+    background: rgb(223, 189, 53);
     padding: 20px;
     border-radius: 5px;
     display: inline-block;
@@ -81,7 +81,7 @@
     color: #fff !important;
     text-transform: uppercase;
     text-decoration: none;
-    background: #f3a600;
+    background: rgb(223, 189, 53);
     padding: 20px;
     border-radius: 5px;
     display: inline-block;
