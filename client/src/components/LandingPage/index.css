@@ -37,8 +37,10 @@
   }
 
   #frontBirdCard {
-    /* background-color: rgba(8, 28, 54, 0.3);
-    color: white; */
+    /* background-color: rgba(8, 28, 54, 0.3); */
+    background-color: rgba(52, 61, 88, 0.85);
+    color: #dadada;
+    filter: drop-shadow(0px 0px 25px #000);
     border: 0px;
     transform: translate(-50%, -50%);
     position: absolute;
@@ -48,6 +50,10 @@
   }
   #tipsContainer {
     border: 0px;
+    /* background-color: rgba(8, 28, 54, 0.3); */
+    background-color: rgba(255, 255, 255, 0);
+    color: #dadada;
+
   }
 
   #tipSpinner {
