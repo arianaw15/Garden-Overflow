@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap'); */
 
 #birdBackground {
     width: 100%; 
@@ -39,6 +39,7 @@
   #frontBirdCard {
     /* background-color: rgba(8, 28, 54, 0.3);
     color: white; */
+    box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
     border: 0px;
     transform: translate(-50%, -50%);
     position: absolute;
@@ -54,7 +55,7 @@
     color: #fff !important;
     text-transform: uppercase;
     text-decoration: none;
-    background: #f3a600;
+    background: rgb(223, 189, 53);
     padding: 20px;
     border-radius: 5px;
     display: inline-block;
@@ -75,7 +76,7 @@
     color: #fff !important;
     text-transform: uppercase;
     text-decoration: none;
-    background: #f3a600;
+    background: rgb(223, 189, 53);
     padding: 20px;
     border-radius: 5px;
     display: inline-block;
