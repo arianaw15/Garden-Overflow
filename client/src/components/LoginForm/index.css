@@ -6,16 +6,6 @@
     position: relative;
 }
 
-.btn {
-    margin: 0;
-    position: relative;
-    left: 50%;
-    top: 100px;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    width: 150px;
-}
-
 .userLogin {
     font-family: 'Secular One', sans-serif;
     text-align: center;
@@ -64,4 +54,9 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 200px;
+}
+
+#googleLoginCardBackground {
+    background-color: rgb(38,38,38);
+    color:rgb(187, 187, 187);
 }

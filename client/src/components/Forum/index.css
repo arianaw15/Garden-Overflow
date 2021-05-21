@@ -20,6 +20,8 @@
     padding: 20px;
     border: black solid 1px;
     border-radius: 15px;
+    color:rgb(187, 187, 187);
+    background-color: rgb(38,38,38);
 }
 
 #postSubmitButton {
@@ -94,13 +96,14 @@ select {
 }
 
 .card-header {
-    background-color: rgba(94, 141, 156, 0.678);
+    background-color: rgb(46, 46, 46);
 }
 
 #welcomeZone {
     font-family: 'Julius Sans One', sans-serif;
     font-weight: 700;
     text-align: center;
+    color:rgb(187, 187, 187);
 }
 
 #inlineFormCustomSelect {
@@ -108,7 +111,10 @@ select {
 }
 
 #zonePostCards {
-    box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);}
+    box-shadow: 0 1px 1px rgba(154,160,185,.05), 0 10px 20px rgba(166,173,201,.2);
+    background-color: rgb(38,38,38);
+    color:rgb(187, 187, 187);
+}
     
 #commentform {
     margin-bottom: 80px;
