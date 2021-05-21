@@ -8,24 +8,35 @@
     background-repeat: no-repeat
 }
 
-/* body {
-    background: #654ea3;
-    background: linear-gradient(to right, #e96443, #904e95);
-    min-height: 100vh
-} */
-
 .row {
     width: 100%;
 }
 
 #editButton {
-    position: absolute;
-    left: 220px;
-    
+    position: relative;
+    top: 40px;
+    left: 30px;
+    width: 120px;
 }
 
-#allPlantsButton {
+#cityName {
     position: relative;
-    left: 40px;
-    top: 30px
+    left: -100px;
+}
+
+#profileBackground {
+    background-color: rgb(38,38,38);
+    color:rgb(187, 187, 187);
+}
+
+#aboutWord {
+    position: relative;
+    top: 20px;
+}
+
+#profileAboutBackground {
+    background-color: rgb(46, 46, 46);
+    color:rgb(187, 187, 187);
+    position: relative;
+    top: 30px;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { GoogleLogin } from "react-google-login";
+import '../LoginForm/index.css';
 require('dotenv').config();
 
 const clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID

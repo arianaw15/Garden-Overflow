@@ -23,7 +23,7 @@ function UserProfile() {
                     <div className="profile mr-3"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="..." width="130" className="rounded mb-2 img-thumbnail" /><a href="/" id="editButton" className="btn btn-outline-dark btn-sm btn-block">Edit Profile</a></div>
                     <div className="media-body mb-5 text-white">
                         <h4 className="mt-0 mb-0">{[]}</h4>
-                        <p className="small mb-4"> <i className="fas fa-map-marker-alt mr-2"></i>Salt Lake City</p>
+                        <p className="small mb-4" id="cityName"> <i className="fas fa-map-marker-alt mr-2"></i>Salt Lake City</p>
                     </div>
                 </div>
             </div>
@@ -40,15 +40,15 @@ function UserProfile() {
                     </li>
                 </ul>
             </div> */}
-                        <div className="px-4 py-5">
-                            <h5 className="mb-0">About</h5>
-                            <div className="p-4 rounded shadow-sm bg-light">
+                        <div className="px-4 py-5" id="profileBackground">
+                            <h5 className="mb-0" id="aboutWord">About</h5>
+                            <div className="p-4 rounded shadow-sm" id="profileAboutBackground">
                                 <p className="font-italic mb-0">Plant Hardiness Zone: 5</p>
                                 <p className="font-italic mb-0">Lives in: Salt Lake City</p>
                                 {/* <p className="font-italic mb-0">Favorites: </p> */}
                             </div>
                         </div>
-                        <div className="py-4 px-4">
+                        <div className="py-4 px-4" id="profileBackground">
                             <div className="d-flex align-items-center justify-content-between mb-3">
                                 <h5 className="mb-0">Recent favorited plants</h5><a href="/" id="allPlantsButton" className="btn btn-link text-muted">Show all</a>
                             </div>
