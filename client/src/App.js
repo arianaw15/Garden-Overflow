@@ -32,6 +32,7 @@ function App() {
         <Route exact path="/Replyboard" component={Replyboard} />
         <Route exact path="/userprofile" component={UserProfile}/>
         <Route exact path="/SignOut" component={SignOutBtn}/>
+        <Route exact path="/PlantPage" component={PlantPage}/>
         <Route component={NoMatch} />
       </Switch>
       <Footer />
