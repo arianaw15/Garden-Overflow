@@ -7,7 +7,7 @@ const Postform = () => {
         <form>
         <div className="mb-3">
           <label htmlFor="Textarea1" className="form-label">
-            Your Post
+            Post Subject:
           </label>
           <textarea
             className="form-control"
@@ -30,7 +30,7 @@ const Postform = () => {
         {/* </select> */}
         <div className="mb-3">
           <label for="Textarea2" className="form-label">
-            Your Post's Content
+            Post Content:
           </label>
           <textarea
             className="form-control"

@@ -22,6 +22,31 @@
     border-radius: 15px;
     color:rgb(187, 187, 187);
     background-color: rgb(38,38,38);
+    box-shadow: 4px 4px 5px rgba(154, 160, 185, 0.26)
+}
+
+/* Form labels */
+.form-label {
+    color: #e8871e;
+}
+
+/* Form textareas */
+.form-control {
+    background: #777777;
+    border-color: #a1a1a1;
+    color: #000000;
+    }
+
+.form-control:focus {
+    background: #777777;
+    color: black;
+    }
+
+#inlineFormCustomSelect {
+    width: 240px;
+    background-color: #777777;
+    border-color: #a1a1a1;
+    color: black;
 }
 
 
@@ -99,11 +124,8 @@ select {
     font-family: 'Julius Sans One', sans-serif;
     font-weight: 700;
     text-align: center;
-    color:rgb(187, 187, 187);
-}
-
-#inlineFormCustomSelect {
-    width: 240px;
+    /* color:rgb(187, 187, 187); */
+    color: #e8871e; /*Palette orange; matches birds on landing page, which makes for a nice flow IMO*/
 }
 
 .zonePostCards {
