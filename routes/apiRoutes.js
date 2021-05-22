@@ -5,11 +5,13 @@ const db = require("../models");
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/garden-overflow");
 
 router.get("/plants/:zone", (req, res, next) => {
-    db.Plants.find({hardiness : req.params.zone}).then(data => res.json(data)).catch(err => res.status(422).json(err));
+    db.Plants.find({hardiness : {$in : [req.params.zone]}}).then(data => res.json(data)).catch(err => res.status(422).json(err));
 });
 
 router.get("/zoneposts/:zone", (req, res, next) => {
+    console.log(req.params.zone);
     db.Posts.find({zone : req.params.zone}).then(data => res.json(data)).catch(err => res.status(422).json(err));
+    
 });
 
 router.get("/comments/:postid", (req, res, next) => {

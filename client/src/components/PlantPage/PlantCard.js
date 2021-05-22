@@ -3,25 +3,16 @@ import { Card, Button } from 'react-bootstrap';
 
 
 
-function PlantCard() {
-  const [plantTable, setPlantTable] = useState([]);
-  useEffect(() => {
-    fetch("https://randomuser.me/api/?results=1")
-      .then((res) => res.json())
-      .then((data) => setPlantTable(data.results));
-  }, []);
-  console.log(plantTable);
-  return plantTable.map((plant) => {
+function PlantCard(props) {
     return (
         <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={plant.picture.large} />
+        <Card.Img style={{height: '15rem'}} variant="top" src={props.image_url} />
         <Button type="submit">Add This Plant to Your Profile</Button>
         <Card.Body>
          
         </Card.Body>
       </Card>
     );
-  });
-}
+  };
 
 export default PlantCard;
