@@ -24,10 +24,6 @@
     background-color: rgb(38,38,38);
 }
 
-#postSubmitButton {
-    position: relative;
-    top: 30px;
-}
 
 select {
     margin-bottom: 15px;
@@ -110,7 +106,7 @@ select {
     width: 240px;
 }
 
-#zonePostCards {
+.zonePostCards {
     box-shadow: 0 1px 1px rgba(154,160,185,.05), 0 10px 20px rgba(166,173,201,.2);
     background-color: rgb(38,38,38);
     color:rgb(187, 187, 187);
@@ -119,4 +115,8 @@ select {
 #commentform {
     margin-bottom: 80px;
     width: 60%;
+}
+
+#commentsubmit {
+    margin-top: 20px;
 }
