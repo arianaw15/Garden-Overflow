@@ -68,7 +68,7 @@ function AmpSignUp() {
           placeholder: "Zip code" 
           },
           { type: "nickname",
-            label: "Create a unique user name:"
+            label: "Enter a unique user name:"
           },
         ]}
       />
