@@ -12,6 +12,8 @@ function Pagination() {
             <a className="nav-link" href="/Zoneforum">MyZone</a>
             <a className="nav-link" href="/userProfile">My Profile</a>
             <a href="/Home"><SignOutBtn /></a>
+            <a className="nav-link" href="/PlantPage">Plant Library</a>
+            <SignOutBtn />
             {/* <a className="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">Disabled</a> */}
         </div>
     </div>
