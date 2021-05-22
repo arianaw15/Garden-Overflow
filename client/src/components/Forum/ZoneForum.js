@@ -38,17 +38,19 @@ const postArr = [
 ];
 
 const ZoneForum = () => {
-  const [posts, setPosts] = useState(postArr);
+  const [posts, setPosts] = useState([{zone : "7"}]);
 
-  // useEffect(() => {
+  useEffect(() => {
      
-  //     fetch("http://localhost:3001/api/zoneposts/7")
-  //     .then(res => {
-  //       setPosts(res);
-  //       console.log(posts);
-  //     })
-  //     .catch(err => console.error());
-  // }, [])
+      fetch("/api/zoneposts/7")
+      .then(res => {
+        return res.json();
+        
+        
+      }).then(res => setPosts(res))
+
+      .catch(err => console.error());
+  }, [])
   
   return (
     <div>
