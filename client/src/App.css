@@ -41,5 +41,9 @@
   --amplify-primary-color: #50C9CE;
   --amplify-primary-tint: #E8871E;
   --amplify-primary-shade: #92FF9E;
-  --amplify-sign-out-color: #ff6347;
+  --amplify-white: #424242;
+  --amplify-light-grey: rgb(102, 138, 104);
+  --amplify-grey: rgb(172, 172, 172);
+  --amplify-secondary-color: rgb(56, 141, 56);
+  --amplify-font-family: 'Julius Sans One', sans-serif;
 }

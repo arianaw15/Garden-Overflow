@@ -7,7 +7,7 @@ const Postform = () => {
         <form>
         <div className="mb-3">
           <label htmlFor="Textarea1" className="form-label">
-            Your Post
+            Post Subject:
           </label>
           <textarea
             className="form-control"
@@ -18,7 +18,7 @@ const Postform = () => {
         </div>
         
         {/* <select className="form-select" aria-label="TagSelect" name="tag"> */}
-        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="tag">
           <option selected>What type of post is this?</option>
           <option value="Question">Question</option>
           <option value="Request">Request</option>
@@ -30,7 +30,7 @@ const Postform = () => {
         {/* </select> */}
         <div className="mb-3">
           <label for="Textarea2" className="form-label">
-            Your Post's Content
+            Post Content:
           </label>
           <textarea
             className="form-control"

@@ -46,6 +46,7 @@ function AmpSignUp() {
     <Redirect to={"/userprofile"} />
   ) : (
     <div>
+      <h6 className="userLogin">Welcome Arbord!</h6>
       <AmplifySignUp
         className="amplify-signup"
         slot="sign-up"
@@ -68,7 +69,8 @@ function AmpSignUp() {
           placeholder: "Zip code" 
           },
           { type: "nickname",
-            label: "Create a unique user name:"
+            label: "Enter a unique user name:",
+            placeholder: "What should we call you?"
           },
         ]}
       />
