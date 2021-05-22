@@ -42,4 +42,7 @@
   --amplify-primary-tint: #E8871E;
   --amplify-primary-shade: #92FF9E;
   --amplify-white: #424242;
+  --amplify-light-grey: rgb(102, 138, 104);
+  --amplify-grey: rgb(172, 172, 172);
+  --amplify-secondary-color: rgb(56, 141, 56);
 }
