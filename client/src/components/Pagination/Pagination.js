@@ -1,4 +1,4 @@
-import { AmplifySignOut } from '@aws-amplify/ui-react';
+import SignOutBtn from '../SignUp/SignOutBtn'
 import React from 'react';
 import './index.css';
 
@@ -11,7 +11,7 @@ function Pagination() {
             <a className="nav-link" href="/SignUp">Create Account</a>
             <a className="nav-link" href="/Zoneforum">MyZone</a>
             <a className="nav-link" href="/userProfile">My Profile</a>
-            <AmplifySignOut />
+            <SignOutBtn />
             {/* <a className="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">Disabled</a> */}
         </div>
     </div>
