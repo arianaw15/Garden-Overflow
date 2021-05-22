@@ -14,6 +14,7 @@ import { RecoilRoot } from 'recoil';
 import AmpSignIn from './components/SignUp/AmplifySignIn';
 import SignOutBtn from './components/SignUp/SignOutBtn';
 import AmpSignUp from './components/SignUp/AmplifySignUp';
+import PlantPage from './components/PlantPage/PlantPage';
 Amplify.configure(awsconfig);
 
 
@@ -31,6 +32,7 @@ function App() {
         <Route exact path="/Replyboard/:postid" render={(props) => <Replyboard postid={props} />} />
         <Route exact path="/userprofile" component={UserProfile}/>
         <Route exact path="/SignOut" component={SignOutBtn}/>
+        <Route exact path="/PlantPage" component={PlantPage}/>
         <Route component={NoMatch} />
       </Switch>
       <Footer />
