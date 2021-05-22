@@ -1,15 +1,18 @@
 /* eslint-disable default-case */
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import './index.css';
 import Amplify, {Hub, Auth} from 'aws-amplify';
 import { AmplifyAuthenticator,AmplifySignIn, AmplifyGoogleButton } from '@aws-amplify/ui-react';
 import awsconfig from '../../aws-exports';
+import userState from '../../utils/UserState';
+import { useRecoilState } from 'recoil';
 import { Redirect } from 'react-router';
+import AmplifyGoogle from './AmplifyGoogle';
 
 Amplify.configure(awsconfig);
 
-function AmpSignIn() {
-  const [user, setUser] = useState(null);
+const AmpSignIn = () => {
+    const [user, setUser] = useRecoilState(userState);
 
   useEffect(() => {
     Hub.listen('auth', ({ payload: { event, data } }) => {
@@ -33,7 +36,7 @@ function AmpSignIn() {
 
   function getUser() {
     return Auth.currentAuthenticatedUser()
-      .then(userData => userData)
+      .then(userData => userData.attributes)
       .catch(() => console.log('Not signed in'));
   }
 
@@ -45,7 +48,7 @@ function AmpSignIn() {
           <AmplifySignIn slot="sign-in">
           <div slot="secondary-footer-content">You’re unbeleafable! &#127804;</div>
             <div slot="federated-buttons">
-              <AmplifyGoogleButton  onClick={() => Auth.federatedSignIn({provider: 'Google'})} />
+              <AmplifyGoogleButton onClick={AmplifyGoogle} />
               <hr />
             </div>
           </AmplifySignIn>
