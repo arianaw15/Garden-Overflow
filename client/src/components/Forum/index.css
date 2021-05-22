@@ -49,10 +49,6 @@
     color: black;
 }
 
-#postSubmitButton {
-    position: relative;
-    top: 5px;
-}
 
 select {
     margin-bottom: 15px;
@@ -132,8 +128,8 @@ select {
     color: #e8871e; /*Palette orange; matches birds on landing page, which makes for a nice flow IMO*/
 }
 
-#zonePostCards {
-    box-shadow: 4px 2px 3px rgba(154,160,185,.05), 6px 4px 10px rgba(166, 173, 201, 0.404);
+.zonePostCards {
+    box-shadow: 0 1px 1px rgba(154,160,185,.05), 0 10px 20px rgba(166,173,201,.2);
     background-color: rgb(38,38,38);
     color:rgb(187, 187, 187);
 }
@@ -141,4 +137,8 @@ select {
 #commentform {
     margin-bottom: 80px;
     width: 60%;
+}
+
+#commentsubmit {
+    margin-top: 20px;
 }

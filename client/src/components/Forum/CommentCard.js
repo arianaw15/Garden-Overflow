@@ -4,7 +4,7 @@ import "./index.css";
 const Commentcard = ({ userName, body }) => {
   return (
     <div className="row justify-content-md-center">
-      <div className="card col">
+      <div className="card col zonePostCards">
         <div className="card-header">
           <span className="username">{userName}</span> commented
         </div>
