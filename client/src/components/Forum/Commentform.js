@@ -4,7 +4,8 @@ const Commentform = ({ postid }) => {
   return (
       <div id="commentform" className="formtainer row justify-content-md-center">
       <form>
-        
+          <input name="postid" type="hidden" value={postid}>
+          </input>
           <label htmlFor="Textarea1" className="form-label">
             Your Comment
           </label>

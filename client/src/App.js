@@ -28,7 +28,7 @@ function App() {
         <Route exact path="/Login" component={AmpSignIn} />
         <Route exact path="/SignUp" component={AmpSignUp} />
         <Route exact path="/ZoneForum" component={Zoneforum} />
-        <Route exact path="/Replyboard" component={Replyboard} />
+        <Route exact path="/Replyboard/:postid" render={(props) => <Replyboard postid={props} />} />
         <Route exact path="/userprofile" component={UserProfile}/>
         <Route exact path="/SignOut" component={SignOutBtn}/>
         <Route component={NoMatch} />

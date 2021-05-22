@@ -17,11 +17,11 @@ router.get("/comments/:postid", (req, res, next) => {
 });
 
 router.post("/addpost", (req, res, next) => {
-    db.Posts.create(req.body).then(data => console.log(`post was created\n${data}`)).catch(err => res.status(422).json(err));
+    db.Posts.create({userName : req.user.userName, ...req.body}).then(data => console.log(`post was created\n${data}`)).catch(err => res.status(422).json(err));
 });
 
 router.post("/addcomment", (req, res, next) => {
-    db.Comments.create(req.body).then(data => console.log(`comment was created\n${data}`)).catch(err => res.status(422).json(err));
+    db.Comments.create({userName : req.user.userName, zone : req.user.zone, ...req.body}).then(data => console.log(`comment was created\n${data}`)).catch(err => res.status(422).json(err));
 });
 
 router.put("/addtogarden", (req, res, next) => {
