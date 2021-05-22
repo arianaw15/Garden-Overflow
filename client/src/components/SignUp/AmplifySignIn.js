@@ -2,8 +2,7 @@
 import React, {useEffect} from 'react';
 import './index.css';
 import Amplify, {Hub, Auth} from 'aws-amplify';
-import { AmplifyAuthenticator,AmplifySignIn } from '@aws-amplify/ui-react';
-import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components';
+import { AmplifyAuthenticator,AmplifySignIn, AmplifyGoogleButton } from '@aws-amplify/ui-react';
 import awsconfig from '../../aws-exports';
 import userState from '../../utils/UserState';
 import { useRecoilState } from 'recoil';
@@ -43,14 +42,19 @@ const AmpSignIn = () => {
 
   return user ? <Redirect to = {'/userprofile'} /> :(
     <>
-    <AmplifyGoogle />
-        <AmplifyAuthenticator>
-        <AmplifySignIn
-          headerText="Sign In To Garden Overflow"
-          slot="sign-in"
-        ></AmplifySignIn>
+      <h6 className="userLogin">Welcome Back!</h6>
+      <AmplifyAuthenticator>
+        <div slot="sign-in">
+          <AmplifySignIn slot="sign-in">
+          <div slot="secondary-footer-content">You’re unbeleafable &#127804;</div>
+            <div slot="federated-buttons">
+              <AmplifyGoogleButton onClick={AmplifyGoogle} />
+              <hr />
+            </div>
+          </AmplifySignIn>
+        </div>
       </AmplifyAuthenticator>
-      </>
+    </>
   );
 }
 

@@ -14,3 +14,50 @@
     flex: 1;
     height: 100vh;
   }
+
+  .userLogin {
+    font-family: 'Secular One', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    
+    /* Shine effect */
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 12px 48px;
+    color: #E8871E;
+    /* color: #ffffff; */
+    background: linear-gradient(to right, #50C9CE 0, #82FF9E 10%, #50C9CE 20%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    font-weight: 600;
+    /* font-size: 36px; */
+    text-decoration: none;
+    white-space: nowrap;
+    
+}
+
+.googleLogin {
+  font-family: 'Secular One', sans-serif;
+  background: #DB4437;
+  width: 25rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+amplify-sign-in {
+  position: relative;
+  top: 40px;
+}
+
+amplify-sign-up {
+  position: relative;
+  top: 60px;
+}

@@ -61,9 +61,14 @@ const AmplifyGoogle = () => {
     }
 
     return (
-        <div>
-            <button onClick={signIn}>Sign In With Google</button>
-        </div>
+        <div class="row">
+  <div class="col-md-3">
+    <a class="btn btn-outline-light" href="/users/googleauth" role="button">
+      <img width="20px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+      Login with Google
+    </a>
+  </div>
+</div>
     );
 }
 
