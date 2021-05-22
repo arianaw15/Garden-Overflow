@@ -3,7 +3,6 @@ import React, {useEffect} from 'react';
 import './index.css';
 import Amplify, {Hub, Auth} from 'aws-amplify';
 import { AmplifyAuthenticator,AmplifySignIn, AmplifyGoogleButton } from '@aws-amplify/ui-react';
-import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components';
 import awsconfig from '../../aws-exports';
 import userState from '../../utils/UserState';
 import { useRecoilState } from 'recoil';
