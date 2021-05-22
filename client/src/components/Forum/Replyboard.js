@@ -2,7 +2,7 @@ import { React, useState, useEffect } from "react";
 import "./index.css";
 import CommentCard from "./CommentCard";
 import Commentform from "./Commentform";
-import axios from "axios";
+
 
 const commArr = [
   {
@@ -32,9 +32,9 @@ const commArr = [
   },
 ];
 
-const Replyboard = ({ postid }) => {
+const Replyboard = (props) => {
   const [comments, setComments] = useState(commArr);
-
+  const postid =  props.postid.match.params.postid;
   useEffect(() => {
     fetch(`/api/comments/${postid || "60a5b5040c777b3a3819c44b"}`)
       .then((res) => {
