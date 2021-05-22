@@ -15,7 +15,7 @@ async function signOut() {
 
 return (
 
-    <button class="signOutBtn" onClick={signOut}>Sign Out</button>
+    <button className="signOutBtn" onClick={signOut}>Sign Out</button>
 
 )
 }

@@ -45,7 +45,8 @@ const AmpSignIn = () => {
       <h6 className="userLogin">Welcome Back!</h6>
       <AmplifyAuthenticator>
         <div slot="sign-in">
-          <AmplifySignIn>
+          <AmplifySignIn slot="sign-in">
+          <div slot="secondary-footer-content">You’re unbeleafable &#127804;</div>
             <div slot="federated-buttons">
               <AmplifyGoogleButton onClick={AmplifyGoogle} />
               <hr />
