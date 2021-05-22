@@ -2,6 +2,30 @@ amplify-sign-out {
     position: relative;
 }
 
+.signOutBtn {
+    font-family: 'Secular One', sans-serif;
+    color: #e2dadb;
+    background: #52aa00;
+    border: 5px;
+    border-color: #69d305;
+    border-style: outset;
+    filter:drop-shadow(2px 3px 3px #000000);
+    border-radius: 5px;
+}
+
+.signOutBtn:hover {
+    background: #185306;
+    border:5px;
+    border-color: #227907;
+    border-style: outset;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
+
 :root {
     --amplify-primary-color: #ff6347;
     --amplify-primary-tint: #ff7359;
