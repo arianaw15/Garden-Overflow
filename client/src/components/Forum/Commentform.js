@@ -14,7 +14,7 @@ const Commentform = ({ postid }) => {
             rows="1"
             name="body"
           ></textarea>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button id="commentsubmit" type="submit" class="btn btn-primary">Submit</button>
         
       </form>
       </div>

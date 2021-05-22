@@ -22,12 +22,33 @@
     border-radius: 15px;
     color:rgb(187, 187, 187);
     background-color: rgb(38,38,38);
+    box-shadow: 4px 4px 5px rgba(154, 160, 185, 0.26)
 }
 
-#postSubmitButton {
-    position: relative;
-    top: 30px;
+/* Form labels */
+.form-label {
+    color: #e8871e;
 }
+
+/* Form textareas */
+.form-control {
+    background: #777777;
+    border-color: #a1a1a1;
+    color: #000000;
+    }
+
+.form-control:focus {
+    background: #777777;
+    color: black;
+    }
+
+#inlineFormCustomSelect {
+    width: 240px;
+    background-color: #777777;
+    border-color: #a1a1a1;
+    color: black;
+}
+
 
 select {
     margin-bottom: 15px;
@@ -103,14 +124,11 @@ select {
     font-family: 'Julius Sans One', sans-serif;
     font-weight: 700;
     text-align: center;
-    color:rgb(187, 187, 187);
+    /* color:rgb(187, 187, 187); */
+    color: #e8871e; /*Palette orange; matches birds on landing page, which makes for a nice flow IMO*/
 }
 
-#inlineFormCustomSelect {
-    width: 240px;
-}
-
-#zonePostCards {
+.zonePostCards {
     box-shadow: 0 1px 1px rgba(154,160,185,.05), 0 10px 20px rgba(166,173,201,.2);
     background-color: rgb(38,38,38);
     color:rgb(187, 187, 187);
@@ -119,4 +137,8 @@ select {
 #commentform {
     margin-bottom: 80px;
     width: 60%;
+}
+
+#commentsubmit {
+    margin-top: 20px;
 }
