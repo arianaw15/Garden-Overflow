@@ -46,6 +46,7 @@ function AmpSignUp() {
     <Redirect to={"/userprofile"} />
   ) : (
     <div>
+      <h6 className="userLogin">Welcome Arbord!</h6>
       <AmplifySignUp
         className="amplify-signup"
         slot="sign-up"
