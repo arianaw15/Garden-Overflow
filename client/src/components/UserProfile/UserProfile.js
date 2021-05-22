@@ -3,16 +3,17 @@ import './index.css';
 import { Auth } from 'aws-amplify';
 
 function UserProfile() {
+    
+
     let [cognitoUser, setCognitoUser] = useState({})
     useEffect(() => {
       
     Auth.currentAuthenticatedUser({
-        bypassCache: false  // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
+        bypassCache: true  // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
     }).then(user => setCognitoUser(user))
     .catch(err => console.log(err));
 }, []);
     console.log(cognitoUser)
-
     return (
         <div>
 <div className="row py-5 px-4">
@@ -22,7 +23,7 @@ function UserProfile() {
                 <div className="media align-items-end profile-head">
                     <div className="profile mr-3"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="..." width="130" className="rounded mb-2 img-thumbnail" /><a href="/" id="editButton" className="btn btn-outline-dark btn-sm btn-block">Edit Profile</a></div>
                     <div className="media-body mb-5 text-white">
-                        <h4 className="mt-0 mb-0">{[]}</h4>
+                        <h4 className="mt-0 mb-0">{!cognitoUser.attributes ? "Standby...": cognitoUser.attributes.nickname}</h4>
                         <p className="small mb-4" id="cityName"> <i className="fas fa-map-marker-alt mr-2"></i>Salt Lake City</p>
                     </div>
                 </div>
