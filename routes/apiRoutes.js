@@ -36,4 +36,8 @@ router.post("/createuser", (req, res, next) => {
     db.Users.create(req.body).then(data => console.log(`user created \n ${data}`)).catch(err => res.status(422).json(err)); 
 });
 
+router.get("/getuser/:username", (req, res, next) => {
+    db.Users.findOne({userName : req.params.username}).then(data => res.json(data)).catch(err => res.status(422).json(err)); 
+});
+
 module.exports = router;
