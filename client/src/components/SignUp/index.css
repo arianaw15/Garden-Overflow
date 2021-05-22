@@ -71,3 +71,9 @@ amplify-sign-up {
   position: relative;
   top: 60px;
 }
+
+.leaf {
+  color: rgb(0, 150, 0);
+  font-weight: 600;
+  font-size: 18px;
+}
