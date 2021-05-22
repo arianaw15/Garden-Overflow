@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+
+
 .profile-head {
     transform: translateY(5rem)
 }
@@ -21,7 +24,18 @@
 
 #cityName {
     position: relative;
-    left: -100px;
+    left: -120px;
+    width: 100%;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 500px) {
+    #cityName {
+        position: relative !important;
+        left: -30px !important;
+        width: 100% !important;
+    }
 }
 
 #profileBackground {

@@ -3,6 +3,7 @@ import React from 'react';
 import './index.css';
 
 function Pagination() {
+
     return (
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">

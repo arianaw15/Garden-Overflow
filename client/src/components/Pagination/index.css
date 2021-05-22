@@ -1,9 +1,10 @@
 amplify-sign-out {
     position: relative;
+    background: tomato;
 }
 
-:root {
+/* :root {
     --amplify-primary-color: #ff6347;
     --amplify-primary-tint: #ff7359;
     --amplify-primary-shade: #e0573e;
-  }
+  } */
