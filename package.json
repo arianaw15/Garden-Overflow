@@ -9,12 +9,8 @@
     "if-env": "^1.0.4",
     "mime": "^1.6.0",
     "mongodb": "^3.6.6",
-<<<<<<< HEAD
     "mongoose": "^5.12.7",
     "react-bootstrap": "^1.6.0"
-=======
-    "mongoose": "^5.12.7"
->>>>>>> 9c3b2ba9f5f02543503d460643503413b812df1f
   },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
