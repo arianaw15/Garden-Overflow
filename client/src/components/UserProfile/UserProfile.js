@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './index.css';
 import { Auth } from 'aws-amplify';
 import LoggedHeader from '../LoggedHeader/LoggedHeader.js';
+import ScrollToTop from '../ScrollToTop/scrollToTop';
+
 
 function UserProfile() {
 
@@ -65,7 +67,8 @@ function UserProfile() {
                     </div>
                 </div>
             </div>
-         </div>
+        <ScrollToTop />
+        </div>
     )
 }
 

@@ -4,6 +4,8 @@ import Postcard from "./Postcard";
 import Postform from "./Postform";
 import { Auth } from 'aws-amplify';
 import LoggedHeader from '../LoggedHeader/LoggedHeader.js';
+import ScrollToTop from '../ScrollToTop/scrollToTop';
+
 
 Auth.currentAuthenticatedUser({
     bypassCache: false  // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
@@ -42,7 +44,7 @@ const ZoneForum = () => {
         {posts.length ? (posts.map(each => <li className="post" key={each.id} ><Postcard {...each} /></li>)) : (<h3>No Posts in this zone currently!</h3>)}
       </ul>
         
-        
+      <ScrollToTop />
     </div>
   );
 };
