@@ -6,19 +6,18 @@
     position: relative;
 }
 
-.userLogin {
+/* .userLogin {
     font-family: 'Secular One', sans-serif;
     text-align: center;
     font-size: 2.5rem;
     
-    /* Shine effect */
+    Shine effect
     position: absolute;
     top: 80px;
     left: 50%;
     transform: translate(-50%,-50%);
     padding: 12px 48px;
     color: #E8871E;
-    /* color: #ffffff; */
     background: linear-gradient(to right, #50C9CE 0, #82FF9E 10%, #50C9CE 20%);
     background-position: 0;
     -webkit-background-clip: text;
@@ -28,11 +27,14 @@
     animation-fill-mode: forwards;
     -webkit-text-size-adjust: none;
     font-weight: 600;
-    /* font-size: 36px; */
     text-decoration: none;
     white-space: nowrap;
     
 }
+
+#userLoginContainer {
+    position: relative;
+} */
 
 @keyframes shine {
     0% {
@@ -56,7 +58,7 @@
     width: 200px;
 }
 
-#googleLoginCardBackground {
-    background-color: rgb(38,38,38);
-    color:rgb(187, 187, 187);
+#welcomeBack {
+    color: white;
+    font-size: 48px;
 }

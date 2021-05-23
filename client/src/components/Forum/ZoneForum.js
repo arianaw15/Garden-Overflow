@@ -3,6 +3,7 @@ import "./index.css";
 import Postcard from "./Postcard";
 import Postform from "./Postform";
 import { Auth } from 'aws-amplify';
+import LoggedHeader from '../LoggedHeader/LoggedHeader.js';
 
 Auth.currentAuthenticatedUser({
     bypassCache: false  // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
@@ -29,6 +30,7 @@ const ZoneForum = () => {
   
   return (
     <div>
+      <LoggedHeader />
       <div className="forumWelcome">
       <h2 id="welcomeZone">Welcome to the Zone {posts[0].zone} Forum!</h2>
       </div>
