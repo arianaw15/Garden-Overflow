@@ -1,4 +1,25 @@
 .toTop {
-   font-family: sans-serif;
-   text-align: center;
+   background-color: #444444;
+   right: 40px;
+   bottom: 40px;
+   position: fixed;
+   z-index: 2;
+   cursor: pointer;
+   border: none;
+   border-radius: 20px;
+   width: 40px;
+   height: 40px;
+   transition: opacity 1s ease-in-out;
+   box-shadow: 0 2px 15px 0 #30582c;
+   outline: none;
+}
+
+.toTop:hover {
+   background-color: #555555;
+   box-shadow: 0 2px 20px 4px #245a1f;
+   width: 46px;
+   height: 46px;
+   border-radius: 23px;
+   right: 37px;
+   bottom: 36px;
 }
