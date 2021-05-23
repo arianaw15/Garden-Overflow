@@ -33,7 +33,7 @@ function Footer() {
                                 </ul>
                             </div>
                             <div className="col-xl-2 col-md-4 col-sm-4 col-12">
-                                <h6 className="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>CONTRIBUTERS</b></h6>
+                                <h6 className="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>CONTRIBUTORS</b></h6>
                                 <ul className="list-unstyled">
                                     <li>Ariana Winters</li>
                                     <li>Brandon Ashby</li>
