@@ -4,6 +4,8 @@ import './index.css'
 import PlantCard from './PlantCard'
 import { Row, Col, Container } from 'react-bootstrap';
 import LoggedHeader from '../LoggedHeader/LoggedHeader.js';
+import ScrollToTop from '../ScrollToTop/scrollToTop';
+
 
 function PlantPage({zone}) {
     const [plantTable, setPlantTable] = useState([]);
@@ -23,8 +25,9 @@ function PlantPage({zone}) {
         <Container>
             <Row className="plantcard" md={3}>
         {plantTable.length ? (plantTable.map(each => <Col className="plant" key={each.id} ><PlantCard {...each} /></Col>)) : (<h3>No Posts in this zone currently!</h3>)}
-      </Row>
-      </Container>
+        </Row>
+        </Container>
+        <ScrollToTop />
       </div>
     )
 }

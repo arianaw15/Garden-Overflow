@@ -1,0 +1,39 @@
+.welcomeUser {
+    position: relative;
+    color: #82FF9E;
+    font-size: 40px;
+    text-align: center;
+    transform: translate(0%, 0%);
+}
+
+.followingInformation {
+    position: relative;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    transform: translate(0%, 0%);
+}
+
+#createUserForm {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    display: inline-block;
+}
+
+#inlineFormCustomSelect {
+    width: 300px;
+}
+
+.hardinessZones {
+    color: white;
+    text-align: center;
+}
+
+.clickHere {
+    font-size: .7rem;
+    /* text-align: center; */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 20%);
+}
