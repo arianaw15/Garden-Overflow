@@ -18,6 +18,7 @@
     "aws-amplify": "^4.0.0",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.1",
+    "cognito-user-pool": "^0.2.4",
     "jquery": "^3.6.0",
     "mime": "^1.6.0",
     "popper.js": "^1.16.1",
