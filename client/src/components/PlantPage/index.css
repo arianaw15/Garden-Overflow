@@ -1,3 +1,11 @@
 .plant {
     padding: 5px;
 }
+.plant-card{
+    background-color: #E8871E;
+}
+.plant-button{
+    background-color: #E8871E;
+    border-color: #e2dadb;
+    color: #e2dadb ;
+}
