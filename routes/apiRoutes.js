@@ -9,9 +9,7 @@ router.get("/plants/:zone", (req, res, next) => {
 });
 
 router.get("/zoneposts/:zone", (req, res, next) => {
-    console.log(req.params.zone);
     db.Posts.find({zone : req.params.zone}).then(data => res.json(data)).catch(err => res.status(422).json(err));
-    
 });
 
 router.get("/comments/:postid", (req, res, next) => {
