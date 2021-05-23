@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb+srv://root:RileyTheDog37@cluster0.yfku1.mongodb.net/garden-overflow?retryWrites=true&w=majority"
+  process.env.MONGODB_URI || "mongodb://localhost/garden-overflow"
 );
 
 const plants = [
@@ -1117,3 +1117,4 @@ db.Plants.remove({})
     console.error(err);
     process.exit(1);
   });
+

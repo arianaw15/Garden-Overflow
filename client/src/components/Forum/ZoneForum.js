@@ -2,60 +2,32 @@ import { React, useState, useEffect } from "react";
 import "./index.css";
 import Postcard from "./Postcard";
 import Postform from "./Postform";
-import axios from "axios";
 
-const postArr = [
-  {userName : "Plantnerd",
-   title : "I love plantsomuch",
-   body : "plants are great, all my friends are plants. I'm so happy. this is fine",
-   zone : "7",
-   tag : "Rant"
-  },
-  {userName : "MYEARP",
-   title : "I grow broccoli",
-   body : "so much broccoli, I'm very regular",
-   zone : "7",
-   tag : "Question"
-  },
-  {userName : "Rick",
-   title : "Hydroponics",
-   body : "All my plants area amazing, they grow in nutrient solution",
-   zone : "7",
-   tag : "GardenBrag"
-  },
-  {userName : "dudebro",
-   title : "arugula is tight",
-   body : "so tasty and flavorful, gotta have it",
-   zone : "7",
-   tag : "Advice"
-  },
-  {userName : "ohboyleaves",
-   title : "Squash",
-   body : "is it a squash or a corgette?",
-   zone : "7",
-   tag : "Article"
-  }
-];
 
 const ZoneForum = () => {
-  const [posts, setPosts] = useState(postArr);
+  const [posts, setPosts] = useState([{zone : "7"}]);
+  // set zone to the current users zone
+  let zone; 
 
-  // useEffect(() => {
+  useEffect(() => {
      
-  //     fetch("http://localhost:3001/api/zoneposts/7")
-  //     .then(res => {
-  //       setPosts(res);
-  //       console.log(posts);
-  //     })
-  //     .catch(err => console.error());
-  // }, [])
+      fetch(`/api/zoneposts/${zone || "7"}`)
+      .then(res => {
+        return res.json();
+        
+        
+      }).then(res => setPosts(res))
+
+      .catch(err => console.error());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
   
   return (
     <div>
       <div className="forumWelcome">
       <h2 id="welcomeZone">Welcome to the Zone {posts[0].zone} Forum!</h2>
       </div>
-      <Postform />
+      <Postform zone/>
 
       <ul className="postlist">
         {posts.length ? (posts.map(each => <li className="post" key={each.id} ><Postcard {...each} /></li>)) : (<h3>No Posts in this zone currently!</h3>)}

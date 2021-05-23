@@ -3,9 +3,9 @@ import { Auth } from 'aws-amplify';
 
 function UserAttributes() {
     return (
-        <div>
-            
-        </div>
+        <h1>
+            HELLO!
+        </h1>
     )
 }
 
