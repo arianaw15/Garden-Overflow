@@ -16,6 +16,7 @@ import SignOutBtn from './components/SignUp/SignOutBtn';
 import AmpSignUp from './components/SignUp/AmplifySignUp';
 import UserAttributes from './components/UserAttributes/UserAttributes';
 import PlantPage from './components/PlantPage/PlantPage';
+import CreateUser from './components/CreateUser/CreateUser';
 Amplify.configure(awsconfig);
 
 
@@ -35,6 +36,7 @@ function App() {
         <Route exact path="/SignOut" component={SignOutBtn}/>
         <Route exact path="/UserAttributes" component={UserAttributes}/>
         <Route exact path="/PlantPage" component={PlantPage}/>
+        <Route exact path="/CreateUser" component={CreateUser}/>
         <Route component={NoMatch} />
       </Switch>
       <Footer />
