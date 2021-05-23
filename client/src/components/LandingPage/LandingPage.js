@@ -12,8 +12,10 @@ function LandingPage() {
           el: myRef.current,
           scale: 1.00,
           scaleMobile: 1.00,
-          color1: 0xe57500,
-          color2: 0x1d6b06,
+          // color1: 0xe57500, /OG orange
+          // color2: 0x1d6b06, /OG orange
+          color1: '#003f00', //new green
+          color2: '#122b16', //new green
           backgroundColor: 2171169
           
         }))
