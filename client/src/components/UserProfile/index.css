@@ -33,6 +33,7 @@
 #userName {
     position: relative;
     left: -120px;
+    top: -20px;
     width: 100%;
     font-family: 'Pathway Gothic One', sans-serif;
     font-size: 1.5rem;

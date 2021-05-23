@@ -1,7 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import Header from './components/Header/Header.js';
 import LandingPage from './components/LandingPage/LandingPage.js';
 import NoMatch from "./components/NoMatch/NoMatch";
 import Footer from "./components/Footer/Footer";
@@ -24,7 +23,6 @@ function App() {
   return (
     <RecoilRoot>
     <Router>
-      {/* <Header /> */}
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/Home" component={LandingPage} />
