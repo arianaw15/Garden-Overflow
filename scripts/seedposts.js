@@ -70,3 +70,8 @@ db.Comments.collection.insertMany(commArr)
     .then((data) => {
     console.log(data.result.n + " records inserted!");
     });
+
+db.Posts.collection.insertMany(postArr)
+    .then((data) => {
+    console.log(data.result.n + " records inserted!");
+    });
