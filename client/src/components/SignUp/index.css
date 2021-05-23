@@ -22,7 +22,7 @@
     
     /* Shine effect */
     position: absolute;
-    top: 140px;
+    top: 70px;
     left: 50%;
     transform: translate(-50%,-50%);
     padding: 12px 48px;
@@ -37,9 +37,22 @@
     -webkit-text-size-adjust: none;
     font-weight: 600;
     text-decoration: none;
-    white-space: nowrap;
-    
+    white-space: nowrap;  
 }
+
+@media screen and (max-width: 430px) {
+  .userLogin {
+    font-size: 3rem !important;
+    width: 100% !important;
+    left: 45% !important; 
+  }
+}
+
+#userLoginContainer {
+  position: relative;
+  height: 100px;
+}
+
 
 @keyframes shine {
   0% {
@@ -64,7 +77,7 @@
 
 amplify-sign-in {
   position: relative;
-  top: 40px;
+  /* top: 0px; */
 }
 
 amplify-sign-up {

@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
 
-/* body {
-    background: linear-gradient(0deg, #fff, 50%, #DEEEFE);
-    font-family: 'Rubik', sans-serif;
-    background: rgb(8,28,54);
-    height: 100px !important
-} */
+#grassImage {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    #grassImage {
+        bottom: -50px;
+    }
+  }
+  
+#footerContainer {
+    position: relative;
+}
 
 .container-fluid {
     overflow: hidden;
@@ -39,3 +48,10 @@ h3 {
 .rights {
     font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
 }
+@media screen and (max-width: 430px) {
+    #footerLogo {
+        position: relative;
+        left: 30%;
+        top: -40px;
+    }
+  }
