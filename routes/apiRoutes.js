@@ -23,7 +23,7 @@ router.post("/addpost", (req, res, next) => {
 });
 
 router.post("/addcomment", (req, res, next) => {
-    db.Comments.create({userName : req.user.userName, zone : req.user.zone, ...req.body}).then(data => console.log(`comment was created\n${data}`)).catch(err => res.status(422).json(err));
+    db.Comments.create({userName : req.user.userName, ...req.body}).then(data => console.log(`comment was created\n${data}`)).catch(err => res.status(422).json(err));
 });
 
 router.put("/addtogarden", (req, res, next) => {

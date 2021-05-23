@@ -14,6 +14,7 @@ function PlantPage({zone}) {
       .then((data) => {
         console.log(data);
         setPlantTable(data)});
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
     return (
         <Container>
