@@ -3,6 +3,7 @@
 }
 .plant-card{
     background-color: #E8871E;
+    min-width: 200px;
 }
 .plant-button{
     background-color: #E8871E;
