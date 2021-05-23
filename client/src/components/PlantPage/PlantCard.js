@@ -1,13 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Card, Button } from 'react-bootstrap';
 
 
 
 function PlantCard(props) {
+function addToGarden() {
+  console.log("Button working");
+  fetch(`/api/addtogarden/`,{
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ props })
+  })
+    .then(data => data.json())
+ }
+
     return (
         <Card className= "plant-card" style={{ width: 'auto' }}>
         <Card.Img style={{height: 'auto'}} variant="top" src={props.image_url} />
-        <Button className="plant-button" type="submit">Add {props.name} to Your Garden</Button>
+        <Button className="plant-button" onClick={addToGarden} type="submit">Add {props.name} to Your Garden</Button>
         
       </Card>
     );

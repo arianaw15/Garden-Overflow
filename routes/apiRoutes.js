@@ -25,6 +25,7 @@ router.post("/addcomment", (req, res, next) => {
 });
 
 router.put("/addtogarden", (req, res, next) => {
+    console.log(req);
     db.Users.findByIdAndUpdate(req.user.id, {"$push" : {"garden" : req.body.plant}},{ "new" : true}).then(data => console.log(`garden was updated\n${data}`)).catch(err => res.status(422).json(err));
 });
 
