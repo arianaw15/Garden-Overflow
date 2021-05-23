@@ -22,7 +22,15 @@
     width: 120px;
 }
 
-#cityName {
+
+@media screen and (max-width: 430px) {
+    #editButton {
+        top: -15px;
+        left: 150px !important;
+    }
+}
+
+#userName {
     position: relative;
     left: -120px;
     width: 100%;
@@ -31,7 +39,7 @@
 }
 
 @media screen and (max-width: 500px) {
-    #cityName {
+    #userName {
         position: relative !important;
         left: -30px !important;
         width: 100% !important;
