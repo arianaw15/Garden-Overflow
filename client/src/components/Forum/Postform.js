@@ -1,10 +1,10 @@
 import React from 'react';
 import "./index.css";
 
-const Postform = () => {
+const Postform = ({zone}) => {
     return (
         <div className="formtainer">
-        <form>
+        <form action="/api/addpost" method="POST">
         <div className="mb-3">
           <label htmlFor="Textarea1" className="form-label">
             Post Subject:
@@ -16,7 +16,7 @@ const Postform = () => {
             name="title"
           ></textarea>
         </div>
-        
+        <input type="hidden" name="zone" value={zone}></input>
         {/* <select className="form-select" aria-label="TagSelect" name="tag"> */}
         <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="tag">
           <option selected>What type of post is this?</option>
