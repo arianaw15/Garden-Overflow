@@ -32,7 +32,8 @@
     "recoil": "^0.3.1",
     "three": "^0.124.0",
     "vanta": "^0.5.21",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "react-scroll-to-top": "^1.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
