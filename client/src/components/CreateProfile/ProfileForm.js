@@ -7,8 +7,8 @@ const ProfileForm = ({username, email,}) => {
                 <input name="userName" type="hidden" value={username}></input>
                 <input name="email" type="hidden" value={email}></input>
                 <input name="garden" type="hidden" value={[]}></input>
-                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="zone">
-                    <option selected>What zone do you live in?</option>
+                <select className="custom-select mr-sm-2" id="inlineFormCustomSelect" name="zone">
+                    <option selected>What hardiness zone do you live in?</option>
                     <option value="1">Zone 1</option>
                     <option value="2">Zone 2</option>
                     <option value="3">Zone 3</option>
