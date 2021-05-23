@@ -2,6 +2,7 @@ import { React, useState, useEffect } from "react";
 import "./index.css";
 import Postcard from "./Postcard";
 import Postform from "./Postform";
+import LoggedHeader from '../LoggedHeader/LoggedHeader.js';
 
 
 const ZoneForum = () => {
@@ -24,6 +25,7 @@ const ZoneForum = () => {
   
   return (
     <div>
+      <LoggedHeader />
       <div className="forumWelcome">
       <h2 id="welcomeZone">Welcome to the Zone {posts[0].zone} Forum!</h2>
       </div>

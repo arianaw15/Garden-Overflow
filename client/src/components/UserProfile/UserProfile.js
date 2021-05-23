@@ -1,34 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
 import { Auth } from 'aws-amplify';
+import LoggedHeader from '../LoggedHeader/LoggedHeader.js';
 
 function UserProfile() {
-    
+
 
     let [cognitoUser, setCognitoUser] = useState({})
     useEffect(() => {
-      
-    Auth.currentAuthenticatedUser({
-        bypassCache: true  // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
-    }).then(user => setCognitoUser(user))
-    .catch(err => console.log(err));
-}, []);
+
+        Auth.currentAuthenticatedUser({
+            bypassCache: true  // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
+        }).then(user => setCognitoUser(user))
+            .catch(err => console.log(err));
+    }, []);
     console.log(cognitoUser)
     return (
         <div>
-<div className="row py-5 px-4">
-    <div className="col-md-12 mx-auto">
-        <div className="bg-white shadow rounded overflow-hidden">
-            <div className="px-4 pt-0 pb-4 cover">
-                <div className="media align-items-end profile-head">
-                    <div className="profile mr-3"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="..." width="130" className="rounded mb-2 img-thumbnail" /><a href="/UserAttributes" id="editButton" className="btn btn-outline-light btn-sm btn-block">Edit Profile</a></div>
-                    <div className="media-body mb-5 text-white">
-                        <h4 className="mt-0 mb-0">{!cognitoUser.attributes ? "Standby...": cognitoUser.attributes.nickname}</h4>
-                        <p className="small mb-4" id="cityName"> <i className="fas fa-map-marker-alt mr-2"></i>Salt Lake City</p>
-                    </div>
-                </div>
-            </div>
-            {/* <div className="bg-light p-4 d-flex justify-content-end text-center">
+        <LoggedHeader />
+            <div className="row py-5 px-4">
+                <div className="col-md-12 mx-auto">
+                    <div className="bg-white shadow rounded overflow-hidden">
+                        <div className="px-4 pt-0 pb-4 cover">
+                            <div className="media align-items-end profile-head">
+                                <div className="profile mr-3"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="..." width="130" className="rounded mb-2 img-thumbnail" /><a href="/UserAttributes" id="editButton" className="btn btn-outline-light btn-sm btn-block">Edit Profile</a></div>
+                                <div className="media-body mb-5 text-white">
+                                    <h4 className="mt-0 mb-0">{!cognitoUser.attributes ? "" : cognitoUser.attributes.nickname}</h4>
+                                    <p className="small mb-4" id="userName"> <i className="fas fa-map-marker-alt mr-2"></i>Marc Zooleo</p>
+                                </div>
+                            </div>
+                        </div>
+                        {/* <div className="bg-light p-4 d-flex justify-content-end text-center">
                 <ul className="list-inline mb-0">
                     <li className="list-inline-item">
                         <h5 className="font-weight-bold mb-0 d-block">215</h5><small className="text-muted"> <i className="fas fa-image mr-1"></i>Photos</small>
@@ -63,7 +65,7 @@ function UserProfile() {
                     </div>
                 </div>
             </div>
-        </div>
+         </div>
     )
 }
 

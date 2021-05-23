@@ -8,6 +8,7 @@ import userState from '../../utils/UserState';
 import { useRecoilState } from 'recoil';
 import { Redirect } from 'react-router';
 import AmplifyGoogle from './AmplifyGoogle';
+import Header from '../Header/Header.js';
 
 Amplify.configure(awsconfig);
 
@@ -42,7 +43,11 @@ const AmpSignIn = () => {
 
   return user ? <Redirect to = {'/userprofile'} /> :(
     <>
+    <div>
+      <Header />
+    <div id="userLoginContainer">
       <h6 className="userLogin">Welcome Back!</h6>
+      </div>
       <AmplifyAuthenticator>
         <div slot="sign-in">
           <AmplifySignIn slot="sign-in">
@@ -54,6 +59,7 @@ const AmpSignIn = () => {
           </AmplifySignIn>
         </div>
       </AmplifyAuthenticator>
+      </div>
     </>
   );
 }

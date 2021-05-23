@@ -38,8 +38,8 @@ const Postform = ({zone}) => {
             rows="2"
             name="body"
           ></textarea>
-        </div>
         <button type="submit" className="btn btn-primary" id="postSubmitButton">Submit</button>
+        </div>
       </form>
     </div>
   );

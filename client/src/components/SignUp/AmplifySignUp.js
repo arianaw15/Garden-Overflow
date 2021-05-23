@@ -7,6 +7,7 @@ import awsconfig from "../../aws-exports";
 import userState from "../../utils/UserState";
 import { useRecoilState } from "recoil";
 import { Redirect } from "react-router";
+import Header from '../Header/Header.js';
 
 Amplify.configure(awsconfig);
 
@@ -46,7 +47,10 @@ function AmpSignUp() {
     <Redirect to={"/userprofile"} />
   ) : (
     <div>
+      <Header />
+      <div id="userLoginContainer">
       <h6 className="userLogin">Welcome Arbord!</h6>
+      </div>
       <AmplifySignUp
         className="amplify-signup"
         slot="sign-up"
