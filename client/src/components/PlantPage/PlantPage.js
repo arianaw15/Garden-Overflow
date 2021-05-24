@@ -24,7 +24,7 @@ function PlantPage({zone}) {
         <LoggedHeader />
         <Container>
             <Row className="plantcard" md={3}>
-        {plantTable.length ? (plantTable.map(each => <Col className="plant" key={each.id} ><PlantCard {...each} /></Col>)) : (<h3>No Posts in this zone currently!</h3>)}
+        {plantTable.length ? (plantTable.map(each => <Col className="plant" key={each.id} ><PlantCard {...each} /></Col>)) : (<h3 style={{color: "white", textAlign: "center"}}>No Posts in this zone currently!</h3>)}
         </Row>
         </Container>
         <ScrollToTop />
