@@ -9,11 +9,11 @@ router.get("/plants/:zone", (req, res, next) => {
 });
 
 router.get("/zoneposts/:zone", (req, res, next) => {
-    db.Posts.find({zone : req.params.zone}).then(data => res.json(data)).catch(err => res.status(422).json(err));
+    db.Posts.find({zone : req.params.zone}).then(data => {data.reverse(); res.json(data)}).catch(err => res.status(422).json(err));
 });
 
 router.get("/comments/:postid", (req, res, next) => {
-    db.Comments.find({postid : req.params.postid}).then(data => res.json(data)).catch(err => res.status(422).json(err));
+    db.Comments.find({postid : req.params.postid}).then(data => {data.reverse(); res.json(data)}).catch(err => res.status(422).json(err));
 });
 
 router.post("/addpost", (req, res, next) => {
