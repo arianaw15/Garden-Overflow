@@ -58,17 +58,21 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
 
 .userSubmitBtn {
-	line-height: 50px;
-	height: 50px;
+	line-height: 30px;
+	height: 40px;
 	text-align: center;
-	width: 300px;
+	width: 200px;
 	cursor: pointer;
+	background-color: rgb(34, 34, 34);
+	padding: 0;
+	border: none;
 }
 
 .userSubmitBtn3 {
 	color: #82FF9E;
 	transition: all 0.3s;
 	position: relative;
+	top: -4px;
 }
 .userSubmitBtn3 span {
 	transition: all 0.3s;
@@ -113,3 +117,15 @@
 	opacity: 0;	
 	transform: scale(0.1, 1);
 }
+
+@media screen and (max-width: 516px) {
+    .userSubmitBtn {
+		position: relative;
+		left: 27%;
+    }
+
+    #inlineFormCustomSelect {
+		position: relative;
+		left: 15%;
+    }
+  }
