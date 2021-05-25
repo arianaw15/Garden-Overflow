@@ -30,7 +30,7 @@ const ZoneForum = () => {
 
       .catch(err => console.error());
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [zone])
   
   return (
     <div>
