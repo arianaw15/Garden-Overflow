@@ -60,7 +60,7 @@ const Replyboard = (props) => {
   return (
     <div>
       <div className="row justify-content-center">
-        <Commentform postid username={!cognitoUser.attributes ? "Stand By..." : cognitoUser.attributes.nickname}/>
+        <Commentform postid={postid} username={!cognitoUser.attributes ? "Stand By..." : cognitoUser.attributes.nickname}/>
       </div>
 
       <ul className="postlist">
