@@ -7,11 +7,11 @@ import grass from './grassImage.png';
 function Footer() {
     return (
         <div id="footerContainer">
-        <div className="container-fluid pb-0 mb-0 justify-content-center text-light ">
+        <div className="container-fluid pb-0 mb-0 justify-content-center text-light">
             <footer>
                 <div className="row my-5 justify-content-center py-5">
-                    <div className="col-11">
-                        <div className="row ">
+                    <div className="col-11" id="footLinks">
+                        <div className="row">
                             <div className="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
                                 <img src={logo} alt="" height="150" style={{ marginBottom: "20px", marginLeft: "20px" }} className="d-inline-block align-text-top mr-2" id="footerLogo" />
                             </div>
@@ -40,11 +40,11 @@ function Footer() {
                                     <li><Link to="https://github.com/Jpeyton-hub" target="blank">James Walker</Link></li>
                                     <li><Link to="https://github.com/jmcdonald112358" target="blank">Justin McDonald</Link></li>
                                     <li><Link to="https://github.com/landonross" target="blank">Landon Ross</Link></li> */}
-                                    <li><a href="https://github.com/arianaw15" target="blank">Ariana Winters</a></li>
-                                    <li><a href="https://github.com/bash7325" target="blank">Brandon Ashby</a></li>
-                                    <li><a href="https://github.com/Jpeyton-hub" target="blank">James Walker</a></li>
-                                    <li><a href="https://github.com/jmcdonald112358" target="blank">Justin McDonald</a></li>
-                                    <li><a href="https://github.com/landonross" target="blank">Landon Ross</a></li>
+                                    <li><a href="https://github.com/arianaw15" target="blank" id="footLinks">Ariana Winters</a></li>
+                                    <li><a href="https://github.com/bash7325" target="blank" id="footLinks">Brandon Ashby</a></li>
+                                    <li><a href="https://github.com/Jpeyton-hub" target="blank" id="footLinks">James Walker</a></li>
+                                    <li><a href="https://github.com/jmcdonald112358" target="blank" id="footLinks">Justin McDonald</a></li>
+                                    <li><a href="https://github.com/landonross" target="blank" id="footLinks">Landon Ross</a></li>
                                 </ul>
                                 {/* <p className="mb-1">Contributers</p> */}
                                 {/* <p>SEAWOODS SECTOR</p> */}

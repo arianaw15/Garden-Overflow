@@ -21,6 +21,7 @@ const ProfileForm = ({username, email,}) => {
                 <input name="userName" type="hidden" value={!cognitoUser.attributes ? "Stand By..." : cognitoUser.attributes.nickname}></input>
                 <input name="email" type="hidden" value={!cognitoUser.attributes ? "Stand By..." : cognitoUser.attributes.email}></input>
                 <input name="garden" type="hidden" value={[]}></input>
+                <div className="buttonPosition">
                 <select className="custom-select mr-sm-2" id="inlineFormCustomSelect" name="zone">
                     <option defaultValue>What hardiness zone do you live in?</option>
                     <option value="1">Zone 1</option>
@@ -38,6 +39,7 @@ const ProfileForm = ({username, email,}) => {
                     <option value="13">Zone 13</option>
                 </select>
                 <button className="userSubmitBtn userSubmitBtn3" type="submit" ><span>Submit</span></button>
+                </div>
             </form>
         </div>
     )
