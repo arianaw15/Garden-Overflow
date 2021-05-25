@@ -1,6 +1,5 @@
 import { React, useState, useEffect } from "react";
 import { Auth } from 'aws-amplify';
-import {Redirect} from 'react-router-dom'
 
 const ProfileForm = ({username, email,}) => {
     let [cognitoUser, setCognitoUser] = useState({});
