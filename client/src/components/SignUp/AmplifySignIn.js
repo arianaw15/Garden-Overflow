@@ -53,7 +53,7 @@ const AmpSignIn = () => {
           <AmplifySignIn slot="sign-in">
           <div slot="secondary-footer-content">You’re unbe<span className="leaf">leaf</span>able! &#127804;</div>
             <div slot="federated-buttons">
-              <AmplifyGoogleButton onClick={AmplifyGoogle} />
+              <AmplifyGoogleButton onClick={() => Auth.federatedSignIn({provider: 'Google'})} />
               <hr />
             </div>
           </AmplifySignIn>
