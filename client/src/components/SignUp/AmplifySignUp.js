@@ -1,8 +1,8 @@
 /* eslint-disable default-case */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import Amplify, { Hub, Auth } from "aws-amplify";
-import { AmplifySignUp } from "@aws-amplify/ui-react";
+import { AmplifySignUp, AmplifyAuthenticator } from "@aws-amplify/ui-react";
 import awsconfig from "../../aws-exports";
 import userState from "../../utils/UserState";
 import { useRecoilState } from "recoil";
@@ -15,42 +15,39 @@ function AmpSignUp() {
   const [user, setUser] = useRecoilState(userState);
 
   useEffect(() => {
-    Hub.listen("auth", ({ payload: { event, data } }) => {
+    Hub.listen('auth', ({ payload: { event, data } }) => {
       switch (event) {
-        case "signIn":
-        case "cognitoHostedUI":
-          getUser().then((userData) => setUser(userData));
+        case 'signIn':
+        case 'cognitoHostedUI':
+          getUser().then(userData => setUser(userData));
           break;
-        case "signOut":
+        case 'signOut':
           setUser(null);
           break;
-        case "signIn_failure":
-        case "cognitoHostedUI_failure":
-          console.log("Sign in failure", data);
+        case 'signIn_failure':
+        case 'cognitoHostedUI_failure':
+          console.log('Sign in failure', data);
           break;
       }
     });
 
-    getUser().then((userData) => setUser(userData));
+    getUser().then(userData => setUser(userData));
   }, []);
 
   function getUser() {
     return Auth.currentAuthenticatedUser()
-      .then((userData) => userData)
-      .catch(() => console.log("Not signed in"));
+      .then(userData => userData.attributes)
+      .catch(() => console.log('Not signed in'));
   }
-  console.log(user);
 
-  //Return
-
-  return user ? (
-    <Redirect to={"/userprofile"} />
-  ) : (
+  return user ? <Redirect to = {'/userprofile'} /> : (
     <div>
       <Header />
       <div id="userLoginContainer">
       <h6 className="userLogin">Welcome Arbord!</h6>
       </div>
+      <AmplifyAuthenticator>
+        
       <AmplifySignUp
         className="amplify-signup"
         slot="sign-up"
@@ -78,7 +75,9 @@ function AmpSignUp() {
           },
         ]}
       />
+      </AmplifyAuthenticator>
     </div>
+    
   );
 }
 
