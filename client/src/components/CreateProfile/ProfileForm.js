@@ -23,7 +23,7 @@ const ProfileForm = ({username, email,}) => {
                     <option value="12">Zone 12</option>
                     <option value="13">Zone 13</option>
                 </select>
-                <div className="userSubmitBtn userSubmitBtn3" type="button"><span>Submit</span></div>
+                <div className="glow-on-hover" type="button"><span></span></div>
             </form>
         </div>
     )
