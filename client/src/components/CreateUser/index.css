@@ -1,57 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
 .welcomeUser {
-    position: relative;
-    color: #82FF9E;
-    font-size: 40px;
-    text-align: center;
-    transform: translate(0%, 0%);
-    font-family: 'Julius Sans One', sans-serif;
-    font-weight: 600;
+	position: relative;
+	color: #82FF9E;
+	font-size: 40px;
+	text-align: center;
+	transform: translate(0%, 0%);
+	font-family: 'Julius Sans One', sans-serif;
+	font-weight: 600;
 }
 
 .followingInformation {
-    position: relative;
-    color: rgb(221, 191, 177);
-    font-size: 24px;
-    text-align: center;
-    transform: translate(0%, 0%);
-    font-family: 'Julius Sans One', sans-serif;
+	position: relative;
+	color: #e8871e;
+	font-size: 24px;
+	text-align: center;
+	transform: translate(0%, 0%);
+	font-family: 'Julius Sans One', sans-serif;
 }
 
 #createUserForm {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 20%);
-    display: inline-block;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 20%);
+	display: inline-block;
 }
 
 #inlineFormCustomSelect {
-    width: 300px;
+	width: 300px;
+	cursor: pointer;
 }
 
 .hardinessZones {
-    color: rgb(221, 191, 177);
-    text-align: center;
-    position:relative;
-    top: 40px;
-    font-family: 'Julius Sans One', sans-serif;
+	color: #e8871e;
+	text-align: center;
+	position:relative;
+	top: 40px;
+	font-family: 'Julius Sans One', sans-serif;
 }
 
 .clickHere {
-    font-size: .7rem;
-    /* text-align: center; */
-    position: absolute;
-    left: 50%;
-    top: 330px;
-    transform: translate(-50%, -50%);
+	font-size: .7rem;
+	/* text-align: center; */
+	position: absolute;
+	left: 50%;
+	top: 330px;
+	transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 430px) {
-    .clickHere {
-        top: 355px;
-    }
-  }
+	.clickHere {
+		top: 355px;
+	}
+}
 
 /* User submit button */
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
