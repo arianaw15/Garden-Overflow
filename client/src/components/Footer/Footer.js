@@ -35,11 +35,16 @@ function Footer() {
                             <div className="col-xl-2 col-md-4 col-sm-4 col-12">
                                 <h6 className="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>CONTRIBUTORS</b></h6>
                                 <ul className="list-unstyled">
-                                    <li>Ariana Winters</li>
-                                    <li>Brandon Ashby</li>
-                                    <li>James Walker</li>
-                                    <li>Justin McDonald</li>
-                                    <li>Landon Ross</li>
+                                    {/* <li><Link to="https://github.com/arianaw15" target="blank">Ariana Winters</Link></li>
+                                    <li><Link to="https://github.com/bash7325" target="blank">Brandon Ashby</Link></li>
+                                    <li><Link to="https://github.com/Jpeyton-hub" target="blank">James Walker</Link></li>
+                                    <li><Link to="https://github.com/jmcdonald112358" target="blank">Justin McDonald</Link></li>
+                                    <li><Link to="https://github.com/landonross" target="blank">Landon Ross</Link></li> */}
+                                    <li><a href="https://github.com/arianaw15" target="blank">Ariana Winters</a></li>
+                                    <li><a href="https://github.com/bash7325" target="blank">Brandon Ashby</a></li>
+                                    <li><a href="https://github.com/Jpeyton-hub" target="blank">James Walker</a></li>
+                                    <li><a href="https://github.com/jmcdonald112358" target="blank">Justin McDonald</a></li>
+                                    <li><a href="https://github.com/landonross" target="blank">Landon Ross</a></li>
                                 </ul>
                                 {/* <p className="mb-1">Contributers</p> */}
                                 {/* <p>SEAWOODS SECTOR</p> */}
