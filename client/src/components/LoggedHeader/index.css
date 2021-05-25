@@ -47,3 +47,12 @@ amplify-sign-out {
     right: 20px;
     position: absolute;
 }
+
+@media screen and (max-width: 768px) {
+    .signOutButton {
+        position: relative;
+        margin-top: 10px;
+        top: 0;
+        left: 0;
+    }
+}
