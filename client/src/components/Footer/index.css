@@ -16,6 +16,11 @@
     position: relative;
 }
 
+#footLinks{
+    z-index: 1 !important;
+    display: inline-block;
+}
+
 .container-fluid {
     overflow: hidden;
     margin-top: 250px;
@@ -23,6 +28,9 @@
     color: #627482 !important;
     margin-bottom: 0;
     padding-bottom: 0
+}
+#inlineBlock {
+    display: inline-block;
 }
 
 small {
@@ -48,6 +56,7 @@ h3 {
 .rights {
     font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
 }
+
 @media screen and (max-width: 430px) {
     #footerLogo {
         position: relative;
