@@ -2,12 +2,13 @@
 import React, { useEffect, useState } from "react";
 import "./index.css";
 import Amplify, { Hub, Auth } from "aws-amplify";
-import { AmplifySignUp, AmplifyAuthenticator } from "@aws-amplify/ui-react";
+import { AmplifySignUp, AmplifyAuthenticator, AmplifySignIn, AmplifyGoogleButton } from "@aws-amplify/ui-react";
 import awsconfig from "../../aws-exports";
 import userState from "../../utils/UserState";
 import { useRecoilState } from "recoil";
 import { Redirect } from "react-router";
 import Header from '../Header/Header.js';
+
 
 Amplify.configure(awsconfig);
 
@@ -40,14 +41,21 @@ function AmpSignUp() {
       .catch(() => console.log('Not signed in'));
   }
 
-  return user ? <Redirect to = {'/userprofile'} /> : (
+  return user ? <Redirect to = {'/userprofile'} /> : ( 
     <div>
       <Header />
       <div id="userLoginContainer">
       <h6 className="userLogin">Welcome Arbord!</h6>
       </div>
       <AmplifyAuthenticator>
-        
+      <div slot="sign-in">
+          <AmplifySignIn slot="sign-in">
+            <div slot="federated-buttons">
+            <AmplifyGoogleButton onClick={() => Auth.federatedSignIn({provider: 'Google'})} />
+              <hr />
+            </div>
+          </AmplifySignIn>
+        </div>
       <AmplifySignUp
         className="amplify-signup"
         slot="sign-up"
