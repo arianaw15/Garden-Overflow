@@ -10,3 +10,10 @@
     border-color: #e2dadb;
     color: #e2dadb ;
 }
+
+.hardinessZonePlants {
+    margin: 20px;
+    text-align: center;
+    color: #82FF9E;
+    font-family: 'Julius Sans One', sans-serif;
+}
