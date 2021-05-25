@@ -41,7 +41,7 @@ function AmpSignUp() {
       .catch(() => console.log('Not signed in'));
   }
 
-  return user ? <Redirect to = {'/userprofile'} /> : ( 
+  return user ? <Redirect to = {'/createuser'} /> : ( 
     <div>
       <Header />
       <div id="userLoginContainer">
