@@ -1,5 +1,4 @@
 .amplify-signup {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,15 +63,6 @@
   100% {
       background-position: 550px;
   }
-}
-
-.googleLogin {
-  font-family: 'Secular One', sans-serif;
-  background: #DB4437;
-  width: 25rem;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%,-50%);
 }
 
 amplify-sign-in {

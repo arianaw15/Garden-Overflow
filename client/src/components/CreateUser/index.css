@@ -21,8 +21,9 @@
 
 #createUserForm {
 	position: relative;
-	left: 50%;
-	transform: translate(-50%, 20%);
+	left: 40%;
+	top: 50px;
+	transform: translate(-50%, -50%);
 	display: inline-block;
 }
 
@@ -39,19 +40,26 @@
 	font-family: 'Julius Sans One', sans-serif;
 }
 
-.clickHere {
+/* .clickHere {
 	font-size: .7rem;
-	/* text-align: center; */
-	position: absolute;
+	text-align: center;
+	position: relative;
 	left: 50%;
 	top: 330px;
 	transform: translate(-50%, -50%);
-}
+} */
 
 @media screen and (max-width: 430px) {
 	.clickHere {
 		top: 355px;
 	}
+}
+
+.buttonPosition {
+	position: relative;
+	top: 30px;
+	left: 60%;
+	transform: translate(-50%, -50%);
 }
 
 /* User submit button */
@@ -79,7 +87,7 @@
 }
 .userSubmitBtn3::before {
 	content: '';
-	/* position: absolute; */
+	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
@@ -119,13 +127,18 @@
 }
 
 @media screen and (max-width: 516px) {
-    .userSubmitBtn {
+    .buttonPosition {
 		position: relative;
-		left: 27%;
+		top: 60px;
+		left: 70%;
     }
-
-    #inlineFormCustomSelect {
-		position: relative;
-		left: 15%;
-    }
+	.userSubmitBtn {
+		left: 12%;
+	}
+	.hardinessZones {
+		font-size: .8rem;
+	}
+	.clickHere {
+		font-size: .7rem;
+	}
   }
