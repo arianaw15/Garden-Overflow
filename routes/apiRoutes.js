@@ -24,12 +24,12 @@ router.post("/addcomment", (req, res, next) => {
     db.Comments.create(req.body).then(data => {console.log(`comment was created\n${data}`); res.redirect(`/Replyboard/${req.body.postid}`)}).catch(err => res.status(422).json(err));
 });
 
-router.put("/addtogarden/:username", (req, res, next) => {
-    db.Users.findByIdAndUpdate(req.params.username, {"$push" : {"garden" : req.body}},{ "new" : true}).then(data => console.log(`garden was updated\n${data}`)).catch(err => res.status(422).json(err));
+router.put("/addtogarden/:id", (req, res, next) => {
+    db.Users.findByIdAndUpdate(req.params.id, {"$push" : {"garden" : req.body}},{ "new" : true}).then(data => console.log(`garden was updated\n${data}`)).catch(err => res.status(422).json(err));
 });
 
-router.put("/removefromgarden/:username", (req, res, next) => {
-    db.Users.findByIdAndUpdate(req.params.username, {"$pull" : {"garden" : req.body}},{ "new" : true, "safe" : true}).then(data => console.log(`garden was updated\n${data}`)).catch(err => res.status(422).json(err));
+router.put("/removefromgarden/:id", (req, res, next) => {
+    db.Users.findByIdAndUpdate(req.params.id, {"$pull" : {"garden" : req.body}},{ "new" : true, "safe" : true}).then(data => console.log(`garden was updated\n${data}`)).catch(err => res.status(422).json(err));
 });
 
 router.post("/createuser", (req, res, next) => {
