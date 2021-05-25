@@ -1,7 +1,9 @@
-import React from 'react';
+import {React, useState} from 'react';
 import "./index.css";
 
 const Postform = ({zone, username}) => {
+
+    const [submitCount]
     return (
         <div className="formtainer">
         <form action="/api/addpost" method="POST">
