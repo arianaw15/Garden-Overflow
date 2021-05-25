@@ -17,11 +17,11 @@ router.get("/comments/:postid", (req, res, next) => {
 });
 
 router.post("/addpost", (req, res, next) => {
-    db.Posts.create(req.body).then(data => console.log(`post was created\n${data}`)).catch(err => res.status(422).json(err));
+    db.Posts.create(req.body).then(data => {console.log(`post was created\n${data}`); res.redirect('/ZoneForum')}).catch(err => res.status(422).json(err));
 });
 
 router.post("/addcomment", (req, res, next) => {
-    db.Comments.create(req.body).then(data => console.log(`comment was created\n${data}`)).catch(err => res.status(422).json(err));
+    db.Comments.create(req.body).then(data => {console.log(`comment was created\n${data}`); res.redirect(`/Replyboard/${req.body.postid}`)}).catch(err => res.status(422).json(err));
 });
 
 router.put("/addtogarden/:username", (req, res, next) => {
@@ -33,7 +33,7 @@ router.put("/removefromgarden/:username", (req, res, next) => {
 });
 
 router.post("/createuser", (req, res, next) => {
-    db.Users.create(req.body).then(data => console.log(`user created \n ${data}`)).catch(err => res.status(422).json(err)); 
+    db.Users.create(req.body).then(data => {console.log(`user created \n ${data}`); res.redirect('/userprofile')}).catch(err => res.status(422).json(err)); 
 });
 
 router.get("/getuser/:username", (req, res, next) => {

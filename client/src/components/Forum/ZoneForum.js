@@ -58,7 +58,7 @@ const ZoneForum = () => {
         <h2 id="welcomeZone">Welcome to the Zone {posts[0].zone} Forum!</h2>
       </div>
       <Postform
-        zone
+        zone = {zone}
         username={
           !cognitoUser.attributes
             ? "Stand By..."
