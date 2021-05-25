@@ -2,9 +2,14 @@ import React from 'react';
 import "./index.css";
 
 const Postform = ({zone, username}) => {
+
+  function refreshPage() {
+    window.location.reload();
+  };
+
     return (
         <div className="formtainer">
-        <form action="/api/addpost" method="POST">
+        <form action="/api/addpost" method="POST" onSubmit={refreshPage}>
         <div className="mb-3">
           <label htmlFor="Textarea1" className="form-label">
             Post Subject:
