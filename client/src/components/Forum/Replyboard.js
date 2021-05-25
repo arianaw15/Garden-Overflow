@@ -45,6 +45,7 @@ const Replyboard = (props) => {
       .then((res) => setComments(res))
 
       .catch((err) => console.error());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
 
@@ -59,7 +60,7 @@ const Replyboard = (props) => {
   return (
     <div>
       <div className="row justify-content-center">
-        <Commentform postid username={!cognitoUser.attributes ? "Stand By..." : cognitoUser.attributes.nickname}/>
+        <Commentform postid={postid} username={!cognitoUser.attributes ? "Stand By..." : cognitoUser.attributes.nickname}/>
       </div>
 
       <ul className="postlist">

@@ -4,6 +4,9 @@
     width: 100%;
     position: absolute;
     bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    z-index: 0;
   }
 
   @media screen and (min-width: 1200px) {
@@ -16,6 +19,10 @@
     position: relative;
 }
 
+#footLinks {
+    z-index: 1 !important;
+}
+
 .container-fluid {
     overflow: hidden;
     margin-top: 250px;
@@ -23,6 +30,9 @@
     color: #627482 !important;
     margin-bottom: 0;
     padding-bottom: 0
+}
+#inlineBlock {
+    display: inline-block;
 }
 
 small {
@@ -48,6 +58,7 @@ h3 {
 .rights {
     font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
 }
+
 @media screen and (max-width: 430px) {
     #footerLogo {
         position: relative;
