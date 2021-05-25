@@ -7,10 +7,10 @@ import grass from './grassImage.png';
 function Footer() {
     return (
         <div id="footerContainer">
-        <div className="container-fluid pb-0 mb-0 justify-content-center text-light" id="inlineBlock">
+        <div className="container-fluid pb-0 mb-0 justify-content-center text-light">
             <footer>
                 <div className="row my-5 justify-content-center py-5">
-                    <div className="col-11">
+                    <div className="col-11" id="footLinks">
                         <div className="row">
                             <div className="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
                                 <img src={logo} alt="" height="150" style={{ marginBottom: "20px", marginLeft: "20px" }} className="d-inline-block align-text-top mr-2" id="footerLogo" />
