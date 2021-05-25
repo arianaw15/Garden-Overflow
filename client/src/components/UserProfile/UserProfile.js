@@ -7,15 +7,15 @@ import GardenCard from "./GarderCard";
 import { Row, Col, Container } from "react-bootstrap";
 
 function UserProfile() {
-  let [user, setUser] = useState({});
+  let [user, setUser] = useState(false);
   let [cognitoUser, setCognitoUser] = useState({});
   useEffect(() => {
     Auth.currentAuthenticatedUser({
       bypassCache: true, // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
     })
-      .then((user) => {
-        console.log(user);
-        setCognitoUser(user);
+      .then((data) => {
+        console.log(data);
+        setCognitoUser(data);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -102,19 +102,19 @@ function UserProfile() {
               <div className="d-flex align-items-center justify-content-between mb-3">
                 <h5 className="mb-0">Recent favorited plants</h5>
                 <a
-                  href="/"
+                  href="/PlantPage"
                   id="allPlantsButton"
                   className="btn btn-link text-muted"
                 >
-                  Show all
+                  Show Plant Library
                 </a>
               </div>
               <Container>
                 <h2 className="hardinessZonePlants">
-                  Plants for hardiness zone:{" "}
+                  Plants in your Garden
                 </h2>
                 <Row className="plantcard" md={3}>
-                  {!user ? "standby" : (
+                  {!user ? (<h3 style={{color: "white", textAlign: "center"}}>No Posts in this zone currently!</h3>) : (
                     user.garden.map((each) => (
                       <Col className="plant" key={each.id}>
                         <GardenCard {...each} />
