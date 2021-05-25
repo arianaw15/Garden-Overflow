@@ -13,11 +13,11 @@ const ProfileForm = ({username, email,}) => {
         .catch(err => console.log(err));
 }, []);
 
-
+    
 
     return (
         <div>
-            <form action="/api/createuser" method="POST" id="createUserForm" onSubmit={e=>{e.preventDefault();window.location.replace('/userprofile')}}>
+            <form action="/api/createuser" method="POST" id="createUserForm" >
                 <input name="userName" type="hidden" value={!cognitoUser.attributes ? "Stand By..." : cognitoUser.attributes.nickname}></input>
                 <input name="email" type="hidden" value={!cognitoUser.attributes ? "Stand By..." : cognitoUser.attributes.email}></input>
                 <input name="garden" type="hidden" value={[]}></input>
