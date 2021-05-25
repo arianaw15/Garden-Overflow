@@ -2,6 +2,7 @@ import { React, useState, useEffect } from "react";
 import "./index.css";
 import CommentCard from "./CommentCard";
 import Commentform from "./Commentform";
+import { Auth } from 'aws-amplify';
 
 
 const commArr = [
@@ -35,6 +36,7 @@ const commArr = [
 const Replyboard = (props) => {
   const [comments, setComments] = useState(commArr);
   const postid =  props.postid.match.params.postid;
+  let [cognitoUser, setCognitoUser] = useState({});
   useEffect(() => {
     fetch(`/api/comments/${postid || "60a5b5040c777b3a3819c44b"}`)
       .then((res) => {
@@ -44,11 +46,20 @@ const Replyboard = (props) => {
 
       .catch((err) => console.error());
   }, []);
+  useEffect(() => {
+
+    Auth.currentAuthenticatedUser({
+        bypassCache: true  // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
+    }).then(user => {
+        console.log(user);
+        setCognitoUser(user)})
+        .catch(err => console.log(err));
+}, []);
 
   return (
     <div>
       <div className="row justify-content-center">
-        <Commentform postid />
+        <Commentform postid username={!cognitoUser.attributes ? "Stand By..." : cognitoUser.attributes.nickname}/>
       </div>
 
       <ul className="postlist">

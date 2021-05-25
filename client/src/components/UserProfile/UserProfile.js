@@ -13,7 +13,9 @@ function UserProfile() {
 
         Auth.currentAuthenticatedUser({
             bypassCache: true  // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
-        }).then(user => setCognitoUser(user))
+        }).then(user => {
+            console.log(user);
+            setCognitoUser(user)})
             .catch(err => console.log(err));
     }, []);
     console.log(cognitoUser)

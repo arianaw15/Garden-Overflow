@@ -7,17 +7,20 @@ import LoggedHeader from '../LoggedHeader/LoggedHeader.js';
 import ScrollToTop from '../ScrollToTop/scrollToTop';
 
 
-Auth.currentAuthenticatedUser({
-    bypassCache: false  // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
-}).then(user => {
-  console.log(user);
-})
-.catch(err => console.log(err));
-
 const ZoneForum = () => {
   const [posts, setPosts] = useState([{zone : "7"}]);
   // set zone to the current users zone
   let zone; 
+  let [cognitoUser, setCognitoUser] = useState({});
+  useEffect(() => {
+
+    Auth.currentAuthenticatedUser({
+        bypassCache: true  // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
+    }).then(user => {
+        console.log(user);
+        setCognitoUser(user)})
+        .catch(err => console.log(err));
+}, []);
 
   useEffect(() => {
      
@@ -30,7 +33,8 @@ const ZoneForum = () => {
 
       .catch(err => console.error());
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []);
+ 
   
   return (
     <div>
@@ -38,7 +42,7 @@ const ZoneForum = () => {
       <div className="forumWelcome">
       <h2 id="welcomeZone">Welcome to the Zone {posts[0].zone} Forum!</h2>
       </div>
-      <Postform zone/>
+      <Postform zone username={!cognitoUser.attributes ? "Stand By..." : cognitoUser.attributes.nickname}/>
 
       <ul className="postlist">
         {posts.length ? (posts.map(each => <li className="post" key={each.id} ><Postcard {...each} /></li>)) : (<h3>No Posts in this zone currently!</h3>)}
