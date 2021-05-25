@@ -1,14 +1,29 @@
-import React from 'react'
+import { React, useState, useEffect } from "react";
+import { Auth } from 'aws-amplify';
+import {Redirect} from 'react-router-dom'
 
 const ProfileForm = ({username, email,}) => {
+    let [cognitoUser, setCognitoUser] = useState({});
+  useEffect(() => {
+
+    Auth.currentAuthenticatedUser({
+        bypassCache: true  // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
+    }).then(user => {
+        console.log(user);
+        setCognitoUser(user)})
+        .catch(err => console.log(err));
+}, []);
+
+
+
     return (
         <div>
-            <form action="/api/createuser" method="POST" id="createUserForm">
-                <input name="userName" type="hidden" value={username}></input>
-                <input name="email" type="hidden" value={email}></input>
+            <form action="/api/createuser" method="POST" id="createUserForm" onSubmit={e=>{e.preventDefault();window.location.replace('/userprofile')}}>
+                <input name="userName" type="hidden" value={!cognitoUser.attributes ? "Stand By..." : cognitoUser.attributes.nickname}></input>
+                <input name="email" type="hidden" value={!cognitoUser.attributes ? "Stand By..." : cognitoUser.attributes.email}></input>
                 <input name="garden" type="hidden" value={[]}></input>
                 <select className="custom-select mr-sm-2" id="inlineFormCustomSelect" name="zone">
-                    <option selected>What hardiness zone do you live in?</option>
+                    <option defaultValue>What hardiness zone do you live in?</option>
                     <option value="1">Zone 1</option>
                     <option value="2">Zone 2</option>
                     <option value="3">Zone 3</option>
@@ -23,7 +38,7 @@ const ProfileForm = ({username, email,}) => {
                     <option value="12">Zone 12</option>
                     <option value="13">Zone 13</option>
                 </select>
-                <div className="userSubmitBtn userSubmitBtn3" type="button"><span>Submit</span></div>
+                <button className="userSubmitBtn userSubmitBtn3" type="submit" ><span>Submit</span></button>
             </form>
         </div>
     )
