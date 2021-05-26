@@ -5,10 +5,44 @@ import PlantCard from './PlantCard'
 import { Row, Col, Container } from 'react-bootstrap';
 import LoggedHeader from '../LoggedHeader/LoggedHeader.js';
 import ScrollToTop from '../ScrollToTop/scrollToTop';
+import { Auth } from "aws-amplify";
 
 
-function PlantPage({zone}) {
-    const [plantTable, setPlantTable] = useState([]);
+
+function PlantPage() {
+  let [zone, setZone] = useState("7");
+  const [plantTable, setPlantTable] = useState([]);
+  let [cognitoUser, setCognitoUser] = useState({});
+
+  useEffect(() => {
+    Auth.currentAuthenticatedUser({
+      bypassCache: true, // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
+    })
+      .then((user) => {
+        console.log(user);
+        setCognitoUser(user);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  useEffect(() => {
+    fetch(
+      `/api/getuser/${
+        !cognitoUser.attributes
+          ? "Stand By..."
+          : cognitoUser.attributes.nickname
+      }`
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res);
+        setZone(res.zone);
+      })
+      .catch((err) => console.error());
+  }, [cognitoUser]);
+
   useEffect(() => {
     fetch(`/api/plants/${zone || "4"}`)
       .then((res) => {
@@ -18,7 +52,7 @@ function PlantPage({zone}) {
         console.log(data);
         setPlantTable(data)});
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [zone]);
     return (
       <div>
         <LoggedHeader />

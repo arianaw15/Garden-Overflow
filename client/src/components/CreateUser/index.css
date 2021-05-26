@@ -21,8 +21,9 @@
 
 #createUserForm {
 	position: relative;
-	left: 50%;
-	transform: translate(-50%, 20%);
+	left: 40%;
+	top: 50px;
+	transform: translate(-50%, -50%);
 	display: inline-block;
 }
 
@@ -39,14 +40,14 @@
 	font-family: 'Julius Sans One', sans-serif;
 }
 
-.clickHere {
+/* .clickHere {
 	font-size: .7rem;
-	/* text-align: center; */
-	position: absolute;
+	text-align: center;
+	position: relative;
 	left: 50%;
 	top: 330px;
 	transform: translate(-50%, -50%);
-}
+} */
 
 @media screen and (max-width: 430px) {
 	.clickHere {
@@ -54,21 +55,32 @@
 	}
 }
 
+.buttonPosition {
+	position: relative;
+	top: 30px;
+	left: 60%;
+	transform: translate(-50%, -50%);
+}
+
 /* User submit button */
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
 
 .userSubmitBtn {
-	line-height: 50px;
-	height: 50px;
+	line-height: 30px;
+	height: 40px;
 	text-align: center;
-	width: 300px;
+	width: 200px;
 	cursor: pointer;
+	background-color: rgb(34, 34, 34);
+	padding: 0;
+	border: none;
 }
 
 .userSubmitBtn3 {
 	color: #82FF9E;
 	transition: all 0.3s;
 	position: relative;
+	top: -4px;
 }
 .userSubmitBtn3 span {
 	transition: all 0.3s;
@@ -113,3 +125,20 @@
 	opacity: 0;	
 	transform: scale(0.1, 1);
 }
+
+@media screen and (max-width: 516px) {
+    .buttonPosition {
+		position: relative;
+		top: 60px;
+		left: 70%;
+    }
+	.userSubmitBtn {
+		left: 12%;
+	}
+	.hardinessZones {
+		font-size: .8rem;
+	}
+	.clickHere {
+		font-size: .7rem;
+	}
+  }

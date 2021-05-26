@@ -1,9 +1,16 @@
 import React from "react";
 
+
+
 const Commentform = ({ postid, username }) => {
+
+  function refreshPage() {
+    window.location.reload();
+  };
+
   return (
       <div id="commentform" className="formtainer row justify-content-md-center">
-      <form action="/api/addcomment" method="POST">
+      <form action="/api/addcomment" method="POST" onSubmit={refreshPage}>
           <input name="postid" type="hidden" value={postid}></input>
           <input type="hidden" name="userName" value={username}></input>
           
