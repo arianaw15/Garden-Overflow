@@ -19,10 +19,10 @@ function LoggedHeader() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <a className="nav-link"> <Link to="/userProfile">My Profile</Link></a>
-                            <a className="nav-link"><Link to="/Zoneforum">MyZone</Link></a>
-                            <a className="nav-link"><Link to="/PlantPage">Plant Library</Link></a>
-                            <a className="signOutButton"><Link to="/Home"><SignOutBtn /></Link></a>
+                            <Link className="nav-link" to="/userProfile">My Profile</Link>
+                            <Link className="nav-link" to="/Zoneforum">MyZone</Link>
+                            <Link className="nav-link" to="/PlantPage">Plant Library</Link>
+                            <Link className="signOutButton" to="/Home"><SignOutBtn /></Link>
                             {/* <a className="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">Disabled</a> */}
                         </div>
                     </div>

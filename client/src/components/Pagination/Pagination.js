@@ -9,7 +9,7 @@ function Pagination() {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
             {/* <a className="nav-link" href="/Login">Login</a> */}
-            <a className="nav-link"><Link to="/SignUp">Login/Create Account</Link></a>
+            <Link className="nav-link" to="/SignUp">Login/Create Account</Link>
             {/* <a href="/Home"><SignOutBtn /></a> */}
             {/* <a className="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">Disabled</a> */}
         </div>
