@@ -115,7 +115,7 @@ function UserProfile() {
                   Plants in your Garden
                 </h2>
                 <Row className="plantcard" md={3}>
-                  {!user ? (<h3 style={{color: "white", textAlign: "center"}}>No Posts in this zone currently!</h3>) : (
+                  {!user ? (<h3 style={{color: "white", textAlign: "center"}}>No Plants in your garden!</h3>) : (
                     user.garden.map((each) => (
                       <Col className="plant" key={each.id}>
                         <GardenCard {...each} />
