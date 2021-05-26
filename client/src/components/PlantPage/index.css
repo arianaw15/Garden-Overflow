@@ -11,6 +11,7 @@
     border-color: #383838;
     color: #e2dadb ;
     transition: .7s all ease;
+    height: 100%;
 }
 
 #plant-button:hover {

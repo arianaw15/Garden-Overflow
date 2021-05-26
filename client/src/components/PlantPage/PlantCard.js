@@ -8,9 +8,9 @@ function PlantCard(props) {
   let [userid, setUserId] = useState("7");
   const [isActive, setActive] = useState(false);
 
-  const toggleClass = () => {
-    setActive(!isActive);
-  };
+  // const toggleClass = () => {
+  //   setActive(!isActive);
+  // };
 
   useEffect(() => {
     Auth.currentAuthenticatedUser({
@@ -48,6 +48,7 @@ function PlantCard(props) {
 
 function addToGarden() {
   console.log("Button working");
+  setActive(!isActive);
   fetch(`/api/addtogarden/${!userid
     ? "Stand By..."
     : userid
@@ -64,7 +65,7 @@ function addToGarden() {
     return (
         <Card className= "plant-card h-100" style={{ width: 'auto' }}>
         <Card.Img className="h-75"style={{height: 'auto'}} variant="top" src={props.image_url} />
-        <Button className={isActive ? 'isActive': null + "plant-button h-25"} onClick={addToGarden && toggleClass} type="submit" id="plant-button">Add {props.name} to Your Garden</Button>
+        <Button className={isActive ? 'isActive': null} onClick={addToGarden} type="submit" id="plant-button">Add {props.name} to Your Garden</Button>
         
       </Card>
     );
