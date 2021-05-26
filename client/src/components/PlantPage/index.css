@@ -6,14 +6,14 @@
     min-width: 200px;
     box-shadow: 0 14px 14px rgba(0, 0, 0, 0.05), 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-.plant-button{
+#plant-button {
     background-color: rgb(27, 27, 27);
     border-color: #383838;
     color: #e2dadb ;
     transition: .7s all ease;
 }
 
-.plant-button:hover{
+#plant-button:hover {
     background-color: #e8871e;
     border-color:rgb(32, 32, 32);
     color: #000000 ;
@@ -24,4 +24,10 @@
     text-align: center;
     color: #82FF9E;
     font-family: 'Julius Sans One', sans-serif;
+}
+
+.isActive {
+    text-decoration: line-through;
+    background-color: rgb(109, 3, 3) !important;
+    height: 100%;
 }
