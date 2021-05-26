@@ -55,7 +55,7 @@ const ZoneForum = () => {
     <div>
       <LoggedHeader />
       <div className="forumWelcome">
-        <h2 id="welcomeZone">Welcome to the Zone {posts[0].zone} Forum!</h2>
+        <h2 id="welcomeZone">Welcome to the Zone {zone} Forum!</h2>
       </div>
       <Postform
         zone = {zone}
