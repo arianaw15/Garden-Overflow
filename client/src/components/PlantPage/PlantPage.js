@@ -57,7 +57,7 @@ function PlantPage() {
       <div>
         <LoggedHeader />
         <Container>
-          <h2 className="hardinessZonePlants">Plants for hardiness zone: </h2>
+          <h2 className="hardinessZonePlants">Plants for hardiness zone: {zone}</h2>
             <Row className="plantcard" md={3}>
         {plantTable.length ? (plantTable.map(each => <Col className="plant" key={each.id} ><PlantCard {...each} /></Col>)) : (<h3 style={{color: "white", textAlign: "center"}}>No Posts in this zone currently!</h3>)}
         </Row>
