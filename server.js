@@ -18,11 +18,11 @@ app.use(express.json());
 app.use('/api', routes);
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(resolve(process.cwd(), 'client/build')))
-  app.get('*', (req, res) => {
-    res.sendFile(resolve(process.cwd(), 'client/build/index.html'))
-  })
+	app.use(express.static('client/build'));
 }
+app.get('*', (request, response) => {
+	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/garden-overflow");
