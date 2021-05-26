@@ -31,8 +31,12 @@ function PlantPage() {
         !cognitoUser.attributes
           ? "Stand By..."
           : cognitoUser.attributes.nickname
-      }`
-    )
+      }`,{
+        headers : { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+         }
+      })
       .then((res) => {
         return res.json();
       })
@@ -44,7 +48,12 @@ function PlantPage() {
   }, [cognitoUser]);
 
   useEffect(() => {
-    fetch(`/api/plants/${zone || "4"}`)
+    fetch(`/api/plants/${zone || "4"}`,{
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    })
       .then((res) => {
         
         return res.json()})

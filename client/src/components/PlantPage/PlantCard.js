@@ -24,8 +24,12 @@ function PlantCard(props) {
         !cognitoUser.attributes
           ? "Stand By..."
           : cognitoUser.attributes.nickname
-      }`
-    )
+      }`,{
+        headers : { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+         }
+      })
       .then((res) => {
         return res.json();
       })
