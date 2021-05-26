@@ -29,7 +29,7 @@ router.put("/addtogarden/:id", (req, res, next) => {
 });
 
 router.put("/removefromgarden/:id", (req, res, next) => {
-    db.Users.findByIdAndUpdate(req.params.id, {"$pull" : {"garden" : req.body}},{ "new" : true, "safe" : true}).then(data => {console.log(`garden was updated\n${data}`); res.redirect('/userprofile')}).catch(err => res.status(422).json(err));
+    db.Users.findByIdAndUpdate(req.params.id, {"$pull" : {"garden" : req.body.id}},{ "new" : true, "safe" : true}).then(data => {console.log(`garden was updated\n${data}`); res.redirect('/userprofile')}).catch(err => res.status(422).json(err));
 });
 
 router.post("/createuser", (req, res, next) => {
