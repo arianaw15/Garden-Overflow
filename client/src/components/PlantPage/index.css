@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gupter:wght@700&display=swap');
+
 .plant {
     padding: 5px;
 }
@@ -12,6 +15,10 @@
     color: #e2dadb ;
     transition: .7s all ease;
     height: 100%;
+    font-family: 'Gupter', serif;
+    /* font-family: 'Cutive Mono', monospace; */
+    /* font-size: .8rem; */
+    /* font-weight: bold; */
 }
 
 #plant-button:hover {
@@ -24,6 +31,7 @@
     margin: 20px;
     text-align: center;
     color: #82FF9E;
+    /* font-family: 'Cutive Mono', monospace; */
     font-family: 'Julius Sans One', sans-serif;
 }
 
