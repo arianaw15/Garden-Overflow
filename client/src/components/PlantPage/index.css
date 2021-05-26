@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gupter:wght@700&display=swap');
+
 .plant {
     padding: 5px;
 }
@@ -6,14 +9,19 @@
     min-width: 200px;
     box-shadow: 0 14px 14px rgba(0, 0, 0, 0.05), 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-.plant-button{
+#plant-button {
     background-color: rgb(27, 27, 27);
     border-color: #383838;
     color: #e2dadb ;
     transition: .7s all ease;
+    height: 100%;
+    font-family: 'Gupter', serif;
+    /* font-family: 'Cutive Mono', monospace; */
+    /* font-size: .8rem; */
+    /* font-weight: bold; */
 }
 
-.plant-button:hover{
+#plant-button:hover {
     background-color: #e8871e;
     border-color:rgb(32, 32, 32);
     color: #000000 ;
@@ -23,5 +31,12 @@
     margin: 20px;
     text-align: center;
     color: #82FF9E;
+    /* font-family: 'Cutive Mono', monospace; */
     font-family: 'Julius Sans One', sans-serif;
+}
+
+.isActive {
+    text-decoration: line-through;
+    background-color: rgb(109, 3, 3) !important;
+    height: 100%;
 }

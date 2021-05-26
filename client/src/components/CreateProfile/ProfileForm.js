@@ -16,12 +16,12 @@ const ProfileForm = ({username, email,}) => {
     
 
     return (
-        <div>
+        <div className="buttonPosition">
             <form action="/api/createuser" method="POST" id="createUserForm" >
                 <input name="userName" type="hidden" value={!cognitoUser.attributes ? "Stand By..." : cognitoUser.attributes.nickname}></input>
                 <input name="email" type="hidden" value={!cognitoUser.attributes ? "Stand By..." : cognitoUser.attributes.email}></input>
                 <input name="garden" type="hidden" value={[]}></input>
-                <div className="buttonPosition">
+                <div>
                 <select className="custom-select mr-sm-2" id="inlineFormCustomSelect" name="zone">
                     <option defaultValue>What hardiness zone do you live in?</option>
                     <option value="1">Zone 1</option>

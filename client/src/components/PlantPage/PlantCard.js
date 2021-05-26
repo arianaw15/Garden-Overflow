@@ -6,6 +6,11 @@ import { Auth } from "aws-amplify";
 function PlantCard(props) {
   let [cognitoUser, setCognitoUser] = useState({});
   let [userid, setUserId] = useState("7");
+  const [isActive, setActive] = useState(false);
+
+  // const toggleClass = () => {
+  //   setActive(!isActive);
+  // };
 
   useEffect(() => {
     Auth.currentAuthenticatedUser({
@@ -43,6 +48,7 @@ function PlantCard(props) {
 
 function addToGarden() {
   console.log("Button working");
+  setActive(!isActive);
   fetch(`/api/addtogarden/${!userid
     ? "Stand By..."
     : userid
@@ -53,13 +59,13 @@ function addToGarden() {
     },
     body: JSON.stringify({ ...props })
   })
-    .then(data => data.json())
+    .then(data => data.json());
  }
 
     return (
         <Card className= "plant-card h-100" style={{ width: 'auto' }}>
         <Card.Img className="h-75"style={{height: 'auto'}} variant="top" src={props.image_url} />
-        <Button className="plant-button h-25" onClick={addToGarden} type="submit">Add {props.name} to Your Garden</Button>
+        <Button className={isActive ? 'isActive': null} onClick={addToGarden} type="submit" id="plant-button">Add {props.name} to Your Garden</Button>
         
       </Card>
     );
