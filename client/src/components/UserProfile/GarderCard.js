@@ -51,6 +51,8 @@ function GardenCard(props) {
       body: JSON.stringify({ ...props })
     })
       .then(data => data.json())
+
+      window.location.reload();
    }
   
       return (
