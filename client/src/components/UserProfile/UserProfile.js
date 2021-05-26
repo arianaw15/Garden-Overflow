@@ -35,6 +35,7 @@ function UserProfile() {
       })
       .then((res) => {
         console.log(res);
+        res.garden.shift();
         setUser(res);
       })
       .catch((err) => console.error());

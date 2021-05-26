@@ -2,7 +2,8 @@ import React from 'react';
 // import Pagination from '../Pagination/Pagination.js';
 import SignOutBtn from '../SignUp/SignOutBtn'
 import './index.css';
-import logo from './TransparentLogoIcon.png'
+import logo from './TransparentLogoIcon.png';
+import { Link } from "react-router-dom";
 
 function LoggedHeader() {
     return (
@@ -18,10 +19,10 @@ function LoggedHeader() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <a className="nav-link" href="/userProfile">My Profile</a>
-                            <a className="nav-link" href="/Zoneforum">MyZone</a>
-                            <a className="nav-link" href="/PlantPage">Plant Library</a>
-                            <a href="/Home" className="signOutButton"><SignOutBtn /></a>
+                            <Link className="nav-link" to="/userProfile">My Profile</Link>
+                            <Link className="nav-link" to="/Zoneforum">MyZone</Link>
+                            <Link className="nav-link" to="/PlantPage">Plant Library</Link>
+                            <Link className="signOutButton" to="/Home"><SignOutBtn /></Link>
                             {/* <a className="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">Disabled</a> */}
                         </div>
                     </div>
