@@ -2,7 +2,7 @@
   "name": "gardenoverflow",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://garden-overflow.herokuapp.com/",
+  "homepage": "https://garden-overflow-0dbba4a30591.herokuapp.com/",
   "dependencies": {
     "bootstrap": "^5.0.1",
     "dotenv": "^9.0.0",
