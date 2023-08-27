@@ -35,6 +35,7 @@ function UserProfile() {
       })
       .then((res) => {
         console.log(res);
+        res.garden.shift();
         setUser(res);
       })
       .catch((err) => console.error());
@@ -111,9 +112,9 @@ function UserProfile() {
                 </a>
               </div>
               <Container>
-                <h2 className="hardinessZonePlants">
+                {/* <h2 className="hardinessZonePlants">
                   Plants in your Garden
-                </h2>
+                </h2> */}
                 <Row className="plantcard" md={3}>
                   {!user ? (<h3 style={{color: "white", textAlign: "center"}}>No Plants in your garden!</h3>) : (
                     user.garden.map((each) => (

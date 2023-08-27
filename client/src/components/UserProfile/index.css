@@ -42,8 +42,9 @@
 @media screen and (max-width: 500px) {
     #userName {
         position: relative !important;
-        left: -30px !important;
+        left: -40px !important;
         width: 100% !important;
+        font-size: 1.1rem;
     }
 }
 

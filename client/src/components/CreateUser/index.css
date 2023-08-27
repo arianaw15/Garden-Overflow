@@ -40,15 +40,6 @@
 	font-family: 'Julius Sans One', sans-serif;
 }
 
-/* .clickHere {
-	font-size: .7rem;
-	text-align: center;
-	position: relative;
-	left: 50%;
-	top: 330px;
-	transform: translate(-50%, -50%);
-} */
-
 @media screen and (max-width: 430px) {
 	.clickHere {
 		top: 355px;
@@ -57,9 +48,11 @@
 
 .buttonPosition {
 	position: relative;
-	top: 30px;
-	left: 60%;
-	transform: translate(-50%, -50%);
+	/* top: 40px; */
+	left: 50%;
+	transform: translate(-40%, 0%);
+	/* text-align: center; */
+	width: 100%;
 }
 
 /* User submit button */
@@ -74,6 +67,7 @@
 	background-color: rgb(34, 34, 34);
 	padding: 0;
 	border: none;
+	margin: 0 auto;
 }
 
 .userSubmitBtn3 {
@@ -129,7 +123,7 @@
 @media screen and (max-width: 516px) {
     .buttonPosition {
 		position: relative;
-		top: 60px;
+		top: 10px;
 		left: 70%;
     }
 	.userSubmitBtn {

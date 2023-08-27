@@ -58,7 +58,7 @@ function GardenCard(props) {
       return (
           <Card className= "plant-card h-100" style={{ width: 'auto' }}>
           <Card.Img className="h-75"style={{height: 'auto'}} variant="top" src={props.image_url} />
-          <Button className="plant-button h-25" onClick={removefromGarden} type="submit">Remove {props.name} from Your Garden</Button>
+          <Button className="plant-button h-25" onClick={removefromGarden} type="submit" id="plant-button">Remove {props.name} from Your Garden</Button>
           
         </Card>
       );

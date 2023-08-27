@@ -13,16 +13,15 @@ const ProfileForm = ({username, email,}) => {
         .catch(err => console.log(err));
 }, []);
 
-let cabbage = { _id:{ $oid:"6099473a3716ae2600f2937c"} , name:"Cabbage",image_url:"https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/cabbage_st-design_gettyimages.jpg?itok=Y4TSs3Lx", type:"Vegetable", sun :"Full Sun", hardiness:["1","2","3","4","5","6","7","8","9"]};
     
 
     return (
-        <div>
+        <div className="buttonPosition">
             <form action="/api/createuser" method="POST" id="createUserForm" >
                 <input name="userName" type="hidden" value={!cognitoUser.attributes ? "Stand By..." : cognitoUser.attributes.nickname}></input>
                 <input name="email" type="hidden" value={!cognitoUser.attributes ? "Stand By..." : cognitoUser.attributes.email}></input>
-                <input name="garden" type="hidden" value={[cabbage]}></input>
-                <div className="buttonPosition">
+                <input name="garden" type="hidden" value={[]}></input>
+                <div>
                 <select className="custom-select mr-sm-2" id="inlineFormCustomSelect" name="zone">
                     <option defaultValue>What hardiness zone do you live in?</option>
                     <option value="1">Zone 1</option>
